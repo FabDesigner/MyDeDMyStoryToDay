@@ -198,6 +198,42 @@
   <ItemGroup>
     <None Include="Resources\mae.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profissao025.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fadinha_batendo_asas.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sereia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\peixes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pai.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profissao.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casamento.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mae.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\irmaos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %282%29.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

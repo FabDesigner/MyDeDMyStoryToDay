@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtEmpresa = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.picFoto = new System.Windows.Forms.PictureBox();
             this.cbServico = new System.Windows.Forms.ComboBox();
             this.btnConectar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
@@ -55,16 +58,15 @@
             this.lblCelular = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.picFoto = new System.Windows.Forms.PictureBox();
-            this.txtEmpresa = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackgroundImage = global::Login.Properties.Resources.profissao;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.txtEmpresa);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.picFoto);
@@ -97,8 +99,37 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(878, 522);
+            this.panel1.Size = new System.Drawing.Size(847, 522);
             this.panel1.TabIndex = 0;
+            // 
+            // txtEmpresa
+            // 
+            this.txtEmpresa.Location = new System.Drawing.Point(480, 45);
+            this.txtEmpresa.Name = "txtEmpresa";
+            this.txtEmpresa.Size = new System.Drawing.Size(179, 20);
+            this.txtEmpresa.TabIndex = 98;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(322, 45);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(159, 20);
+            this.label4.TabIndex = 97;
+            this.label4.Text = "Nome da empresa:";
+            // 
+            // picFoto
+            // 
+            this.picFoto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picFoto.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.picFoto.Image = global::Login.Properties.Resources.profissao025;
+            this.picFoto.Location = new System.Drawing.Point(680, 18);
+            this.picFoto.Name = "picFoto";
+            this.picFoto.Size = new System.Drawing.Size(160, 186);
+            this.picFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picFoto.TabIndex = 96;
+            this.picFoto.TabStop = false;
             // 
             // cbServico
             // 
@@ -186,9 +217,9 @@
             this.btnExcluir.BackColor = System.Drawing.Color.Red;
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnExcluir.Location = new System.Drawing.Point(680, 469);
+            this.btnExcluir.Location = new System.Drawing.Point(680, 456);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(160, 37);
+            this.btnExcluir.Size = new System.Drawing.Size(160, 50);
             this.btnExcluir.TabIndex = 92;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
@@ -198,9 +229,9 @@
             this.btnAtualizar.BackColor = System.Drawing.Color.Blue;
             this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtualizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAtualizar.Location = new System.Drawing.Point(680, 425);
+            this.btnAtualizar.Location = new System.Drawing.Point(680, 400);
             this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(160, 37);
+            this.btnAtualizar.Size = new System.Drawing.Size(160, 50);
             this.btnAtualizar.TabIndex = 91;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = false;
@@ -210,9 +241,9 @@
             this.btnPesquisar.BackColor = System.Drawing.Color.Fuchsia;
             this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPesquisar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPesquisar.Location = new System.Drawing.Point(680, 381);
+            this.btnPesquisar.Location = new System.Drawing.Point(680, 344);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(160, 37);
+            this.btnPesquisar.Size = new System.Drawing.Size(160, 50);
             this.btnPesquisar.TabIndex = 90;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
@@ -222,9 +253,9 @@
             this.btnSalvar.BackColor = System.Drawing.Color.Lime;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSalvar.Location = new System.Drawing.Point(680, 337);
+            this.btnSalvar.Location = new System.Drawing.Point(680, 286);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(160, 37);
+            this.btnSalvar.Size = new System.Drawing.Size(160, 50);
             this.btnSalvar.TabIndex = 89;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
@@ -234,9 +265,9 @@
             this.btnInserir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnInserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInserir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnInserir.Location = new System.Drawing.Point(680, 294);
+            this.btnInserir.Location = new System.Drawing.Point(680, 230);
             this.btnInserir.Name = "btnInserir";
-            this.btnInserir.Size = new System.Drawing.Size(160, 37);
+            this.btnInserir.Size = new System.Drawing.Size(160, 50);
             this.btnInserir.TabIndex = 88;
             this.btnInserir.Text = "Inserir";
             this.btnInserir.UseVisualStyleBackColor = false;
@@ -281,7 +312,7 @@
             // 
             this.lblFoto.AutoSize = true;
             this.lblFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFoto.Location = new System.Drawing.Point(699, 261);
+            this.lblFoto.Location = new System.Drawing.Point(696, 207);
             this.lblFoto.Name = "lblFoto";
             this.lblFoto.Size = new System.Drawing.Size(121, 20);
             this.lblFoto.TabIndex = 83;
@@ -416,46 +447,19 @@
             this.lblCodigo.TabIndex = 70;
             this.lblCodigo.Text = "Código:";
             // 
-            // picFoto
-            // 
-            this.picFoto.Image = global::Login.Properties.Resources.usuaria2;
-            this.picFoto.Location = new System.Drawing.Point(680, 18);
-            this.picFoto.Name = "picFoto";
-            this.picFoto.Size = new System.Drawing.Size(160, 240);
-            this.picFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picFoto.TabIndex = 96;
-            this.picFoto.TabStop = false;
-            // 
-            // txtEmpresa
-            // 
-            this.txtEmpresa.Location = new System.Drawing.Point(480, 45);
-            this.txtEmpresa.Name = "txtEmpresa";
-            this.txtEmpresa.Size = new System.Drawing.Size(179, 20);
-            this.txtEmpresa.TabIndex = 98;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(322, 45);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(159, 20);
-            this.label4.TabIndex = 97;
-            this.label4.Text = "Nome da empresa:";
-            // 
             // Profissao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(878, 522);
+            this.ClientSize = new System.Drawing.Size(847, 522);
             this.Controls.Add(this.panel1);
             this.Name = "Profissao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Profissao";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

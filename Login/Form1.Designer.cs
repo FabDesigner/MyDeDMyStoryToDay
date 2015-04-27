@@ -76,6 +76,7 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.Blue;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLogin.Location = new System.Drawing.Point(13, 207);
@@ -88,6 +89,7 @@
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.Color.Red;
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLogout.Location = new System.Drawing.Point(106, 207);
@@ -100,6 +102,7 @@
             // btnPortais
             // 
             this.btnPortais.BackColor = System.Drawing.Color.Blue;
+            this.btnPortais.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.btnPortais.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPortais.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnPortais.Location = new System.Drawing.Point(197, 207);
@@ -112,6 +115,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::Login.Properties.Resources.GifsAnimados107;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);

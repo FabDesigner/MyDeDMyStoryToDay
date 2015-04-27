@@ -379,6 +379,8 @@
             // 
             // picFoto
             // 
+            this.picFoto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picFoto.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.picFoto.Image = global::Login.Properties.Resources.usuaria2;
             this.picFoto.Location = new System.Drawing.Point(683, 13);
             this.picFoto.Name = "picFoto";

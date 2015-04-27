@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtMatrimonio = new System.Windows.Forms.TextBox();
+            this.picFoto = new System.Windows.Forms.PictureBox();
             this.cbCasados = new System.Windows.Forms.ComboBox();
             this.btnConectar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
@@ -55,14 +56,15 @@
             this.lblCelular = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.picFoto = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackgroundImage = global::Login.Properties.Resources.casamento;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.txtMatrimonio);
             this.panel1.Controls.Add(this.picFoto);
             this.panel1.Controls.Add(this.cbCasados);
@@ -93,7 +95,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(877, 521);
+            this.panel1.Size = new System.Drawing.Size(855, 521);
             this.panel1.TabIndex = 0;
             // 
             // txtMatrimonio
@@ -102,6 +104,18 @@
             this.txtMatrimonio.Name = "txtMatrimonio";
             this.txtMatrimonio.Size = new System.Drawing.Size(428, 20);
             this.txtMatrimonio.TabIndex = 127;
+            // 
+            // picFoto
+            // 
+            this.picFoto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picFoto.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.picFoto.Image = global::Login.Properties.Resources.amante4;
+            this.picFoto.Location = new System.Drawing.Point(679, 17);
+            this.picFoto.Name = "picFoto";
+            this.picFoto.Size = new System.Drawing.Size(160, 240);
+            this.picFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picFoto.TabIndex = 124;
+            this.picFoto.TabStop = false;
             // 
             // cbCasados
             // 
@@ -412,29 +426,19 @@
             this.lblCodigo.TabIndex = 99;
             this.lblCodigo.Text = "Código:";
             // 
-            // picFoto
-            // 
-            this.picFoto.Image = global::Login.Properties.Resources.amante4;
-            this.picFoto.Location = new System.Drawing.Point(679, 17);
-            this.picFoto.Name = "picFoto";
-            this.picFoto.Size = new System.Drawing.Size(160, 240);
-            this.picFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picFoto.TabIndex = 124;
-            this.picFoto.TabStop = false;
-            // 
             // Conjuge
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(877, 521);
+            this.ClientSize = new System.Drawing.Size(855, 521);
             this.Controls.Add(this.panel1);
             this.Name = "Conjuge";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Conjuge";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

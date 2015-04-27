@@ -35,6 +35,7 @@
             this.btnInserir = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
+            this.picFoto = new System.Windows.Forms.PictureBox();
             this.cbSexo = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.mskCelular = new System.Windows.Forms.MaskedTextBox();
@@ -53,14 +54,15 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblTexto = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.picFoto = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackgroundImage = global::Login.Properties.Resources.download;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.lblNome);
             this.panel1.Controls.Add(this.lblFoto);
             this.panel1.Controls.Add(this.btnExcluir);
@@ -89,7 +91,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(881, 523);
+            this.panel1.Size = new System.Drawing.Size(850, 523);
             this.panel1.TabIndex = 0;
             // 
             // lblNome
@@ -159,6 +161,18 @@
             this.btnPesquisar.TabIndex = 196;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
+            // 
+            // picFoto
+            // 
+            this.picFoto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picFoto.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.picFoto.Image = global::Login.Properties.Resources.fadinha_batendo_asas;
+            this.picFoto.Location = new System.Drawing.Point(680, 18);
+            this.picFoto.Name = "picFoto";
+            this.picFoto.Size = new System.Drawing.Size(160, 184);
+            this.picFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picFoto.TabIndex = 202;
+            this.picFoto.TabStop = false;
             // 
             // cbSexo
             // 
@@ -333,29 +347,19 @@
             this.lblCodigo.TabIndex = 179;
             this.lblCodigo.Text = "Código:";
             // 
-            // picFoto
-            // 
-            this.picFoto.Image = global::Login.Properties.Resources.mae;
-            this.picFoto.Location = new System.Drawing.Point(680, 18);
-            this.picFoto.Name = "picFoto";
-            this.picFoto.Size = new System.Drawing.Size(160, 184);
-            this.picFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picFoto.TabIndex = 202;
-            this.picFoto.TabStop = false;
-            // 
             // Mae
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(881, 523);
+            this.ClientSize = new System.Drawing.Size(850, 523);
             this.Controls.Add(this.panel1);
             this.Name = "Mae";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mãe";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
