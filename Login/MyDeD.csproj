@@ -50,11 +50,35 @@
     <Compile Include="Conjuge.Designer.cs">
       <DependentUpon>Conjuge.cs</DependentUpon>
     </Compile>
+    <Compile Include="Filhos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Filhos.Designer.cs">
+      <DependentUpon>Filhos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Irmaos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Irmaos.Designer.cs">
+      <DependentUpon>Irmaos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mae.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mae.Designer.cs">
+      <DependentUpon>Mae.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pai.Designer.cs">
+      <DependentUpon>Pai.cs</DependentUpon>
     </Compile>
     <Compile Include="Portais.cs">
       <SubType>Form</SubType>
@@ -85,8 +109,20 @@
     <EmbeddedResource Include="Conjuge.resx">
       <DependentUpon>Conjuge.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Filhos.resx">
+      <DependentUpon>Filhos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Irmaos.resx">
+      <DependentUpon>Irmaos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mae.resx">
+      <DependentUpon>Mae.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pai.resx">
+      <DependentUpon>Pai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Portais.resx">
       <DependentUpon>Portais.cs</DependentUpon>
@@ -137,6 +173,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\personalidade.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\amante4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\celebridade.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filho.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filho2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filho3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filho4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pai.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mae.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
