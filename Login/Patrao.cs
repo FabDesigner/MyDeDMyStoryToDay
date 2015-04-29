@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Login
 {
-    public partial class Profissao : Form
+    public partial class Patrao : Form
     {
-        public Profissao()
+        public Patrao()
         {
             InitializeComponent();
-        }
-
-        private void btnPatrao_Click(object sender, EventArgs e)
-        {
-            Patrao patrao = new Patrao();
-            patrao.ShowDialog();
         }
 
         private void btnColega_Click(object sender, EventArgs e)

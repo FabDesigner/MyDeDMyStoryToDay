@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Colega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Colega.Designer.cs">
+      <DependentUpon>Colega.cs</DependentUpon>
+    </Compile>
     <Compile Include="Conjuge.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,12 @@
     <Compile Include="Pai.Designer.cs">
       <DependentUpon>Pai.cs</DependentUpon>
     </Compile>
+    <Compile Include="Patrao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patrao.Designer.cs">
+      <DependentUpon>Patrao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Portais.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +118,9 @@
     <Compile Include="Voce.Designer.cs">
       <DependentUpon>Voce.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Colega.resx">
+      <DependentUpon>Colega.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Conjuge.resx">
       <DependentUpon>Conjuge.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pai.resx">
       <DependentUpon>Pai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patrao.resx">
+      <DependentUpon>Patrao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Portais.resx">
       <DependentUpon>Portais.cs</DependentUpon>
@@ -233,6 +251,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\download %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\patrao.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profissao049.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\desenho16.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colegas.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -30,3 +30,5 @@ D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.Irmaos.resourc
 D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.Filhos.resources
 D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.Pai.resources
 D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.Mae.resources
+D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.Colega.resources
+D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.Patrao.resources
