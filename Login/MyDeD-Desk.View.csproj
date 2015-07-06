@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F4253FBB-C1EF-4BE0-A050-5108D760D6F4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Login</RootNamespace>
+    <AssemblyName>Login</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmColega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmColega.Designer.cs">
+      <DependentUpon>frmColega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConjuge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConjuge.Designer.cs">
+      <DependentUpon>frmConjuge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCurso.Designer.cs">
+      <DependentUpon>frmCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFilhos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFilhos.Designer.cs">
+      <DependentUpon>frmFilhos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="abInicializacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="abInicializacao.Designer.cs">
+      <DependentUpon>abInicializacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLocalFormacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLocalFormacao.Designer.cs">
+      <DependentUpon>frmLocalFormacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIrmaos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIrmaos.Designer.cs">
+      <DependentUpon>frmIrmaos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMae.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMae.Designer.cs">
+      <DependentUpon>frmMae.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMateria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMateria.Designer.cs">
+      <DependentUpon>frmMateria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIMyDeD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIMyDeD.Designer.cs">
+      <DependentUpon>MDIMyDeD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPai.Designer.cs">
+      <DependentUpon>frmPai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPatrao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPatrao.Designer.cs">
+      <DependentUpon>frmPatrao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProfessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProfessor.Designer.cs">
+      <DependentUpon>frmProfessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProfissao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProfissao.Designer.cs">
+      <DependentUpon>frmProfissao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmReitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReitor.Designer.cs">
+      <DependentUpon>frmReitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSegredo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSegredo.Designer.cs">
+      <DependentUpon>frmSegredo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVoce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVoce.Designer.cs">
+      <DependentUpon>frmVoce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserLoginDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserLoginDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserLoginDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserLoginDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="wbMyDeDNav.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wbMyDeDNav.Designer.cs">
+      <DependentUpon>wbMyDeDNav.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmColega.resx">
+      <DependentUpon>frmColega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConjuge.resx">
+      <DependentUpon>frmConjuge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCurso.resx">
+      <DependentUpon>frmCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFilhos.resx">
+      <DependentUpon>frmFilhos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="abInicializacao.resx">
+      <DependentUpon>abInicializacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLocalFormacao.resx">
+      <DependentUpon>frmLocalFormacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIrmaos.resx">
+      <DependentUpon>frmIrmaos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMae.resx">
+      <DependentUpon>frmMae.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMateria.resx">
+      <DependentUpon>frmMateria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIMyDeD.resx">
+      <DependentUpon>MDIMyDeD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPai.resx">
+      <DependentUpon>frmPai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPatrao.resx">
+      <DependentUpon>frmPatrao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProfessor.resx">
+      <DependentUpon>frmProfessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProfissao.resx">
+      <DependentUpon>frmProfissao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="frmReitor.resx">
+      <DependentUpon>frmReitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSegredo.resx">
+      <DependentUpon>frmSegredo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVoce.resx">
+      <DependentUpon>frmVoce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wbMyDeDNav.resx">
+      <DependentUpon>wbMyDeDNav.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="UserLoginDataSet.xsc">
+      <DependentUpon>UserLoginDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UserLoginDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserLoginDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserLoginDataSet.xss">
+      <DependentUpon>UserLoginDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UserLoginDataSet1.xsc">
+      <DependentUpon>UserLoginDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="UserLoginDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserLoginDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserLoginDataSet1.xss">
+      <DependentUpon>UserLoginDataSet1.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GifsAnimados107.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuaria2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuaria.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Praia.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personalidade.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\amante4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\celebridade.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filho.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filho2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filho3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filho4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pai.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mae.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profissao025.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fadinha_batendo_asas.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sereia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\peixes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pai.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profissao.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casamento.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mae.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\irmaos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\patrao.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profissao049.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\desenho16.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colegas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profissao0491.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\desenho161.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\set05.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paisagem.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\esquerda.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\esquerda1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\centralizado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\direita.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\justificado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagem.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bancoDados.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pesquisar.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aquivos.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atualizar.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excuir.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formacao.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curso.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reitor.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\materia.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\professor.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\segredo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyDeDClass.Model\MyDeDClass.Model.csproj">
+      <Project>{eaec261b-6f52-4366-a6d8-fbc587e7f738}</Project>
+      <Name>MyDeDClass.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\globo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\msn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yahoo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\youtube.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atualizar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pesquisar12.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

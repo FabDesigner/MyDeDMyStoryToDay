@@ -118,11 +118,29 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="centralizado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\centralizado.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="profissao" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\profissao.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="profissao0491" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\profissao0491.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="segredo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\segredo.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="filho3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\filho3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="desenho161" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\desenho161.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="patrao" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\patrao.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="facebook" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\facebook.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="download (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\download (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,8 +148,11 @@
   <data name="pai" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pai.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fadinha_batendo_asas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fadinha_batendo_asas.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="esquerda1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\esquerda1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="esquerda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\esquerda.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="peixes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\peixes.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,14 +169,50 @@
   <data name="mae1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mae.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="GifsAnimados107" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GifsAnimados107.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bancoDados" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bancoDados.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="justificado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\justificado.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fadinha_batendo_asas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fadinha_batendo_asas.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="colegas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\colegas.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mae" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mae.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="personalidade" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\personalidade.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="excuir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\excuir.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="atualizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\atualizar.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="youtube" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\youtube.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formacao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formacao.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="msn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\msn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imagem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imagem.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="professor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\professor.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="atualizar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\atualizar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="globo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\globo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="profissao025" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\profissao025.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,8 +235,20 @@
   <data name="Praia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Praia.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="desenho16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\desenho16.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="materia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\materia.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="curso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\curso.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reitor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reitor.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="set05" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\set05.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yahoo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yahoo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="usuaria" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usuaria.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,14 +256,23 @@
   <data name="amante4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\amante4.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="aquivos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aquivos.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Paisagem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Paisagem.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="profissao049" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\profissao049.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="filho3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\filho3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="desenho16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\desenho16.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="celebridade" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\celebridade.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pesquisar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pesquisar.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="irmaos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\irmaos.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,7 +280,13 @@
   <data name="filho2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\filho2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="colegas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\colegas.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="direita" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\direita.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GifsAnimados107" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GifsAnimados107.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pesquisar12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pesquisar12.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

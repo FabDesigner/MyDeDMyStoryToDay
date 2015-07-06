@@ -1,0 +1,5 @@
+D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\MyDeDClass.Model\bin\Debug\MyDeDClass.Model.dll
+D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\MyDeDClass.Model\bin\Debug\MyDeDClass.Model.pdb
+D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\MyDeDClass.Model\obj\Debug\MyDeDClass.Model.csprojResolveAssemblyReference.cache
+D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\MyDeDClass.Model\obj\Debug\MyDeDClass.Model.dll
+D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\MyDeDClass.Model\obj\Debug\MyDeDClass.Model.pdb

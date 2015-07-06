@@ -1,0 +1,175 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Login
+{
+    public partial class frmLocalFormacao : Form
+    {
+        public frmLocalFormacao()
+        {
+            InitializeComponent();
+        }
+
+        private void btnEstudo_Click(object sender, EventArgs e)
+        {
+            txtEstudo.Text = Convert.ToString(DateTime.Now.Subtract(dtpMatricula.Value).Days);
+
+            int estudo = DateTime.Now.Year - dtpMatricula.Value.Year;
+            if (DateTime.Now.Month < dtpMatricula.Value.Month)
+            {
+                estudo = estudo - 1;
+            }
+            else
+            {
+                if (DateTime.Now.Month == dtpMatricula.Value.Month && DateTime.Now.Day < dtpMatricula.Value.Day)
+                {
+                    estudo = estudo - 1;
+                }
+            }
+            txtEstudo.Text = Convert.ToString(estudo + " " + "ANOS");
+        }
+
+        private void picFoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog file = new OpenFileDialog();
+            file.Filter = "jpg|*.jpg";
+            if (file.ShowDialog() == DialogResult.OK)
+            {
+                picFoto.ImageLocation = file.FileName;
+            }
+        }
+
+        private void picConjuge_Click(object sender, EventArgs e)
+        {
+            Form conj = new frmConjuge();
+            //' Seta o pai do form como sendo o mesmo pai do
+            //' form que está em execução
+            conj.MdiParent = this.MdiParent;
+            conj.Show();
+        }
+
+        private void picFilho_Click(object sender, EventArgs e)
+        {
+            Form filho = new frmFilhos();
+            //' Seta o pai do form como sendo o mesmo pai do
+            //' form que está em execução
+            filho.MdiParent = this.MdiParent;
+            filho.Show();
+        }
+
+        private void picMae_Click(object sender, EventArgs e)
+        {
+            Form mae = new frmMae();
+            //' Seta o pai do form como sendo o mesmo pai do
+            //' form que está em execução
+            mae.MdiParent = this.MdiParent;
+            mae.Show();
+        }
+
+        private void picPai_Click(object sender, EventArgs e)
+        {
+            Form pai = new frmPai();
+            //' Seta o pai do form como sendo o mesmo pai do
+            //' form que está em execução
+            pai.MdiParent = this.MdiParent;
+            pai.Show();
+        }
+
+        private void picIrmao_Click(object sender, EventArgs e)
+        {
+            Form irmao = new frmIrmaos();
+            //' Seta o pai do form como sendo o mesmo pai do
+            //' form que está em execução
+            irmao.MdiParent = this.MdiParent;
+            irmao.Show();
+        }
+
+        private void picProfissao_Click(object sender, EventArgs e)
+        {
+            Form prof = new frmProfissao();
+            //' Seta o pai do form como sendo o mesmo pai do
+            //' form que está em execução
+            prof.MdiParent = this.MdiParent;
+            prof.Show();
+        }
+
+        private void picPatrao_Click(object sender, EventArgs e)
+        {
+            Form pat = new frmPatrao();
+            //' Seta o pai do form como sendo o mesmo pai do
+            //' form que está em execução
+            pat.MdiParent = this.MdiParent;
+            pat.Show();
+        }
+
+        private void picColegas_Click(object sender, EventArgs e)
+        {
+            Form colega = new frmColega();
+            //' Seta o pai do form como sendo o mesmo pai do
+            //' form que está em execução
+            colega.MdiParent = this.MdiParent;
+            colega.Show();
+        }
+
+        private void picVoce_Click(object sender, EventArgs e)
+        {
+            Form voce = new frmVoce();
+            //' Seta o pai do form como sendo o mesmo pai do
+            //' form que está em execução
+            voce.MdiParent = this.MdiParent;
+            voce.Show();
+        }
+
+        private void picCurso_Click(object sender, EventArgs e)
+        {
+            Form curso = new frmCurso();
+            //' Seta o pai do form como sendo o mesmo pai do
+            //' form que está em execução
+            curso.MdiParent = this.MdiParent;
+            curso.Show();
+        }
+
+        private void picMateria_Click(object sender, EventArgs e)
+        {
+            Form mat = new frmMateria();
+            //' Seta o pai do form como sendo o mesmo pai do
+            //' form que está em execução
+            mat.MdiParent = this.MdiParent;
+            mat.Show();
+        }
+
+        private void picProfessor_Click(object sender, EventArgs e)
+        {
+            Form professor = new frmProfessor();
+            //' Seta o pai do form como sendo o mesmo pai do
+            //' form que está em execução
+            professor.MdiParent = this.MdiParent;
+            professor.Show();
+        }
+
+        private void picReitor_Click(object sender, EventArgs e)
+        {
+            Form reitor = new frmReitor();
+            //' Seta o pai do form como sendo o mesmo pai do
+            //' form que está em execução
+            reitor.MdiParent = this.MdiParent;
+            reitor.Show();
+        }
+
+        private void picSegredo_Click(object sender, EventArgs e)
+        {
+            Form seg = new frmSegredo();
+            //' Seta o pai do form como sendo o mesmo pai do
+            //' form que está em execução
+            seg.MdiParent = this.MdiParent;
+            seg.Show();
+        }
+    }
+}

@@ -19,11 +19,8 @@ D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\bin\Debug\Login.exe
 D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\bin\Debug\Login.pdb
 D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\MyDeD.csprojResolveAssemblyReference.cache
 D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.Conjuge.resources
-D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.Form1.resources
-D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.Portais.resources
 D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.Profissao.resources
 D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.Properties.Resources.resources
-D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.VidaPessoal.resources
 D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.Voce.resources
 D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\MyDeD.csproj.GenerateResource.Cache
 D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.Irmaos.resources
@@ -32,3 +29,11 @@ D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.Pai.resources
 D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.Mae.resources
 D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.Colega.resources
 D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.Patrao.resources
+D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.MDIMyDeD.resources
+D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.Login.resources
+D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.Inicializando.resources
+D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.LocalFormacao.resources
+D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.Curso.resources
+D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.Materia.resources
+D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.Professor.resources
+D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.Segredo.resources
