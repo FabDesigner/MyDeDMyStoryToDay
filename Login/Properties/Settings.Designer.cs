@@ -33,5 +33,16 @@ namespace Login.Properties {
                 return ((string)(this["UserLoginConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=fabiano-pc\\sqlexpress;Initial Catalog=UserLogin;Integrated Security=T" +
+            "rue")]
+        public string UserLoginConnectionString1 {
+            get {
+                return ((string)(this["UserLoginConnectionString1"]));
+            }
+        }
     }
 }

@@ -12,7 +12,7 @@ namespace Login
 {
     public partial class MDIMyDeD : Form
     {
-        private int childFormNumber = 0;
+        private int childForm = 0;
 
         public MDIMyDeD()
         {

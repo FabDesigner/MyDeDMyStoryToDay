@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.IO;
 
 namespace Login
 {
@@ -29,8 +28,9 @@ namespace Login
 
         private void btnLogar_Click(object sender, EventArgs e)
         {
-            string conexoes = @"Data Source=(local)\SQLEXPRESS;Initial Catalog=UserLogin;Integrated Security=True";
-            SqlConnection conn = new SqlConnection(conexoes);
+            //string conexoes = @"Data Source=(local)\SQLEXPRESS;Initial Catalog=UserLogin;Integrated Security=True";
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = Properties.Settings.Default.UserLoginConnectionString;
             SqlCommand comando = new SqlCommand("SELECT COUNT (*) FROM tbLogando WHERE NomeUser = @user AND SenhaUser = @senha", conn);
 
             comando.Parameters.Add("@codigo", SqlDbType.Int).Value = txtCodigo.Text;
@@ -57,7 +57,8 @@ namespace Login
         private void btnCadastrar_Click_1(object sender, EventArgs e)
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = @"Data Source=(local)\SQLEXPRESS;Initial Catalog=UserLogin;Integrated Security=True";
+            //conn.ConnectionString = @"Data Source=(local)\SQLEXPRESS;Initial Catalog=UserLogin;Integrated Security=True";
+            conn.ConnectionString = Properties.Settings.Default.UserLoginConnectionString;
             {
                 try
                 {
@@ -87,8 +88,8 @@ namespace Login
             }
             
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = @"Data Source=(local)\SQLEXPRESS;Initial Catalog=UserLogin;Integrated Security=True";
-
+            //conn.ConnectionString = @"Data Source=(local)\SQLEXPRESS;Initial Catalog=UserLogin;Integrated Security=True";
+            conn.ConnectionString = Properties.Settings.Default.UserLoginConnectionString;
             try
             {
                 conn.Open();
@@ -108,7 +109,7 @@ namespace Login
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Impossível localizar seu registro. Vereifique seu código, ou faça o seu cadastro.", "Localização de Usuário(a) sem sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Impossível localizar seu registro. Vereifique seu código, ou faça o seu cadastro.", ex.Message);
             }
         }
 
@@ -116,6 +117,13 @@ namespace Login
         {
             Form web = new wbMyDeDNav();
             web.Show();
+        }
+
+        private void dgvLogin_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtCodigo.Text = Convert.ToString(dgvLogin.CurrentRow.Cells[0].Value);
+            txtUsuarios.Text = Convert.ToString(dgvLogin.CurrentRow.Cells[1].Value);
+        
         }
     }
 }

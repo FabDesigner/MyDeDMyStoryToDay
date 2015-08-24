@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UserLogin" Class="DiagramacaoDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=fabiano-pc\sqlexpress;Initial Catalog=UserLogin;Integrated Security=True" SettingsObjectName="Login.Properties.Settings" SettingsPropertyName="UserLoginConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbLogando" Member="tbLogandos">
+    <Type Name="tbLogando">
+      <Column Name="CodUser" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NomeUser" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="SenhaUser" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Association Name="tbLogando_tbVoce" Member="tbVoces" ThisKey="CodUser" OtherKey="CodVoce" Type="tbVoce" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbVoce" Member="tbVoces">
+    <Type Name="tbVoce">
+      <Column Name="CodVoce" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DtNascimento" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="IdadeVoce" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="NomeVoce" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DtAtual" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="FotoVoce" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="EnderecoVoce" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="TelFixo" Type="System.String" DbType="VarChar(18) NOT NULL" CanBeNull="false" />
+      <Column Name="Operadora" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="TelCel" Type="System.String" DbType="VarChar(18) NOT NULL" CanBeNull="false" />
+      <Column Name="Texto" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="tbLogando_tbVoce" Member="tbLogando" ThisKey="CodVoce" OtherKey="CodUser" Type="tbLogando" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

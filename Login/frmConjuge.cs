@@ -12,22 +12,13 @@ namespace Login
 {
     public partial class frmConjuge : Form
     {
+        string imgLoc = "";
         public frmConjuge()
         {
             InitializeComponent();
         }
 
-        private void picFoto_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog file = new OpenFileDialog();
-            file.Filter = "jpg|*.jpg";
-            if (file.ShowDialog() == DialogResult.OK)
-            {
-                picFoto.ImageLocation = file.FileName;
-            }
-        }
-
-        private void btnIdade_Click(object sender, EventArgs e)
+        private void dtpNascimento_ValueChanged(object sender, EventArgs e)
         {
             txtIdade.Text = Convert.ToString(DateTime.Now.Subtract(dtpNascimento.Value).Days);
 
@@ -46,7 +37,7 @@ namespace Login
             txtIdade.Text = Convert.ToString(idade + " " + "ANOS");
         }
 
-        private void btnCasamento_Click(object sender, EventArgs e)
+        private void dtpCasamento_ValueChanged(object sender, EventArgs e)
         {
             txtCasados.Text = Convert.ToString(DateTime.Now.Subtract(dtpCasamento.Value).Days);
 
@@ -63,6 +54,35 @@ namespace Login
                 }
             }
             txtCasados.Text = Convert.ToString(casamento + " " + "ANOS");
+        }
+
+        private void picFoto_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog file = new OpenFileDialog();
+                file.Filter = "JPG Files (*.jpg)|*.jpg |GIF Files (*.gif)|*.gif |All Files (*.*)|*.*";
+                file.Title = "Select tbVocePicture";
+                if (file.ShowDialog() == DialogResult.OK)
+                {
+                    imgLoc = file.FileName.ToString();
+                    picFoto.ImageLocation = imgLoc;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnIdade_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnCasamento_Click(object sender, EventArgs e)
+        {
+            
         }
 
         private void picVoce_Click(object sender, EventArgs e)
@@ -190,7 +210,5 @@ namespace Login
             seg.MdiParent = this.MdiParent;
             seg.Show();
         }
-
-       
     }
 }

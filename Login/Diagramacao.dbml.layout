@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Diagramacao">
+  <DataContextMoniker Name="/DiagramacaoDataContext" />
+  <nestedChildShapes>
+    <classShape Id="9b40372a-8ff8-4f0e-ba25-5b29b3e6c76d" absoluteBounds="0.625, 0.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DiagramacaoDataContext/tbLogando" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ee160371-6fac-4a57-85a2-accd5a4d7dcd" absoluteBounds="0.64, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b391edf8-7f39-4d4b-8e0b-340272b2d10e" absoluteBounds="0.625, 2.75, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/DiagramacaoDataContext/tbVoce" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bdaabd10-5c59-4866-9ccc-7d49259d80fc" absoluteBounds="0.64000000000000012, 3.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.625 : 1.8862939453125); (1.625 : 2.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DiagramacaoDataContext/tbLogando/tbLogando_tbVoce" />
+      <nodes>
+        <classShapeMoniker Id="9b40372a-8ff8-4f0e-ba25-5b29b3e6c76d" />
+        <classShapeMoniker Id="b391edf8-7f39-4d4b-8e0b-340272b2d10e" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

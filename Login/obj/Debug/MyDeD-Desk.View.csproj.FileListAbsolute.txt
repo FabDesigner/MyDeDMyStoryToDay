@@ -1,8 +1,6 @@
 D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\bin\Debug\Login.exe.config
 D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\bin\Debug\Login.exe
 D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\bin\Debug\Login.pdb
-D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\bin\Debug\MyDeDClass.Model.dll
-D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\bin\Debug\MyDeDClass.Model.pdb
 D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\MyDeD-Desk.View.csprojResolveAssemblyReference.cache
 D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.abInicializacao.resources
 D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.frmLocalFormacao.resources
@@ -27,3 +25,5 @@ D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.frmConjuge.res
 D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.frmCurso.resources
 D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.frmFilhos.resources
 D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Login.wbMyDeDNav.resources
+D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\Interop.PassDlg.dll
+D:\MyDeD-MeuQueridoDiario\MyDeDMyStoryToDay\Login\obj\Debug\MyDeD-Desk.View.csproj.ResolveComReference.cache

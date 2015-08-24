@@ -29,18 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVoce));
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvVoce = new System.Windows.Forms.DataGridView();
+            this.codVoceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codUserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtNascimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fotoDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dtHojeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idadeVoceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeVoceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtAtualDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.enderecoVoceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telFixoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telCelDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.operadoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telCelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fotoVoceDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.tbVoceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userLoginDataSet1 = new Login.UserLoginDataSet1();
             this.rcbTexto = new System.Windows.Forms.RichTextBox();
@@ -54,9 +57,10 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.lblNascimento = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.lblCodigo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.picCorretor = new System.Windows.Forms.PictureBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox33 = new System.Windows.Forms.PictureBox();
             this.pictureBox34 = new System.Windows.Forms.PictureBox();
@@ -95,33 +99,31 @@
             this.dtpHoje = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.txtIdade = new System.Windows.Forms.TextBox();
-            this.btnJustificado = new System.Windows.Forms.Button();
-            this.btnDireita = new System.Windows.Forms.Button();
-            this.btnCentralizado = new System.Windows.Forms.Button();
-            this.btnEsquerda = new System.Windows.Forms.Button();
-            this.picImagem = new System.Windows.Forms.PictureBox();
             this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
-            this.btnSublinhado = new System.Windows.Forms.Button();
-            this.btnItalico = new System.Windows.Forms.Button();
-            this.btnNegrito = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.picSeta1 = new System.Windows.Forms.PictureBox();
             this.picFoto = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.picExcluir = new System.Windows.Forms.PictureBox();
-            this.picAtualizar = new System.Windows.Forms.PictureBox();
+            this.picImprimir = new System.Windows.Forms.PictureBox();
             this.picSalvar = new System.Windows.Forms.PictureBox();
-            this.picPesquisar = new System.Windows.Forms.PictureBox();
-            this.picBancoDados = new System.Windows.Forms.PictureBox();
-            this.txtPesquisar = new System.Windows.Forms.TextBox();
+            this.picAtualizar = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.dtpInicio = new System.Windows.Forms.DateTimePicker();
+            this.dtpFim = new System.Windows.Forms.DateTimePicker();
+            this.picExcluir = new System.Windows.Forms.PictureBox();
+            this.picPesquisar = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.tbVoceTableAdapter = new Login.UserLoginDataSet1TableAdapters.tbVoceTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVoce)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbVoceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userLoginDataSet1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCorretor)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
@@ -157,16 +159,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.picMae)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picConjuge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFilho)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picImagem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSeta1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picExcluir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAtualizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImprimir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSalvar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAtualizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picExcluir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPesquisar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBancoDados)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -174,102 +175,131 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(549, 76);
+            this.label3.Location = new System.Drawing.Point(552, 76);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 20);
             this.label3.TabIndex = 66;
             this.label3.Text = "Idade:";
             // 
-            // dataGridView1
+            // dgvVoce
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codigoDataGridViewTextBoxColumn,
+            this.dgvVoce.AllowUserToAddRows = false;
+            this.dgvVoce.AllowUserToDeleteRows = false;
+            this.dgvVoce.AllowUserToResizeColumns = false;
+            this.dgvVoce.AllowUserToResizeRows = false;
+            this.dgvVoce.AutoGenerateColumns = false;
+            this.dgvVoce.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvVoce.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvVoce.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVoce.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codVoceDataGridViewTextBoxColumn,
+            this.codUserDataGridViewTextBoxColumn,
             this.dtNascimentoDataGridViewTextBoxColumn,
-            this.idadeDataGridViewTextBoxColumn,
-            this.nomeDataGridViewTextBoxColumn,
-            this.fotoDataGridViewImageColumn,
-            this.dtHojeDataGridViewTextBoxColumn,
-            this.enderecoDataGridViewTextBoxColumn,
+            this.idadeVoceDataGridViewTextBoxColumn,
+            this.nomeVoceDataGridViewTextBoxColumn,
+            this.dtAtualDataGridViewTextBoxColumn,
+            this.enderecoVoceDataGridViewTextBoxColumn,
             this.telFixoDataGridViewTextBoxColumn,
-            this.telCelDataGridViewImageColumn,
-            this.textoDataGridViewTextBoxColumn});
-            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.dataGridView1.DataSource = this.tbVoceBindingSource;
-            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.dataGridView1.Location = new System.Drawing.Point(143, 400);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(829, 299);
-            this.dataGridView1.TabIndex = 60;
+            this.operadoraDataGridViewTextBoxColumn,
+            this.telCelDataGridViewTextBoxColumn,
+            this.textoDataGridViewTextBoxColumn,
+            this.fotoVoceDataGridViewImageColumn});
+            this.dgvVoce.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.dgvVoce.DataSource = this.tbVoceBindingSource;
+            this.dgvVoce.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.dgvVoce.Location = new System.Drawing.Point(143, 400);
+            this.dgvVoce.Name = "dgvVoce";
+            this.dgvVoce.ReadOnly = true;
+            this.dgvVoce.RowHeadersVisible = false;
+            this.dgvVoce.RowHeadersWidth = 9;
+            this.dgvVoce.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvVoce.Size = new System.Drawing.Size(829, 299);
+            this.dgvVoce.TabIndex = 60;
+            this.dgvVoce.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVoce_CellContentClick);
             // 
-            // codigoDataGridViewTextBoxColumn
+            // codVoceDataGridViewTextBoxColumn
             // 
-            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "Codigo";
-            this.codigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
-            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
-            this.codigoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codVoceDataGridViewTextBoxColumn.DataPropertyName = "CodVoce";
+            this.codVoceDataGridViewTextBoxColumn.HeaderText = "Código";
+            this.codVoceDataGridViewTextBoxColumn.Name = "codVoceDataGridViewTextBoxColumn";
+            this.codVoceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codUserDataGridViewTextBoxColumn
+            // 
+            this.codUserDataGridViewTextBoxColumn.DataPropertyName = "CodUser";
+            this.codUserDataGridViewTextBoxColumn.HeaderText = "Usuário(a)";
+            this.codUserDataGridViewTextBoxColumn.Name = "codUserDataGridViewTextBoxColumn";
+            this.codUserDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dtNascimentoDataGridViewTextBoxColumn
             // 
             this.dtNascimentoDataGridViewTextBoxColumn.DataPropertyName = "DtNascimento";
-            this.dtNascimentoDataGridViewTextBoxColumn.HeaderText = "DtNascimento";
+            this.dtNascimentoDataGridViewTextBoxColumn.HeaderText = "Data de Nascimento";
             this.dtNascimentoDataGridViewTextBoxColumn.Name = "dtNascimentoDataGridViewTextBoxColumn";
+            this.dtNascimentoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // idadeDataGridViewTextBoxColumn
+            // idadeVoceDataGridViewTextBoxColumn
             // 
-            this.idadeDataGridViewTextBoxColumn.DataPropertyName = "Idade";
-            this.idadeDataGridViewTextBoxColumn.HeaderText = "Idade";
-            this.idadeDataGridViewTextBoxColumn.Name = "idadeDataGridViewTextBoxColumn";
+            this.idadeVoceDataGridViewTextBoxColumn.DataPropertyName = "IdadeVoce";
+            this.idadeVoceDataGridViewTextBoxColumn.HeaderText = "Sua Idade";
+            this.idadeVoceDataGridViewTextBoxColumn.Name = "idadeVoceDataGridViewTextBoxColumn";
+            this.idadeVoceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // nomeDataGridViewTextBoxColumn
+            // nomeVoceDataGridViewTextBoxColumn
             // 
-            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
-            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
-            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            this.nomeVoceDataGridViewTextBoxColumn.DataPropertyName = "NomeVoce";
+            this.nomeVoceDataGridViewTextBoxColumn.HeaderText = "Seu Nome";
+            this.nomeVoceDataGridViewTextBoxColumn.Name = "nomeVoceDataGridViewTextBoxColumn";
+            this.nomeVoceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // fotoDataGridViewImageColumn
+            // dtAtualDataGridViewTextBoxColumn
             // 
-            this.fotoDataGridViewImageColumn.DataPropertyName = "Foto";
-            this.fotoDataGridViewImageColumn.HeaderText = "Foto";
-            this.fotoDataGridViewImageColumn.Name = "fotoDataGridViewImageColumn";
+            this.dtAtualDataGridViewTextBoxColumn.DataPropertyName = "DtAtual";
+            this.dtAtualDataGridViewTextBoxColumn.HeaderText = "Data Atual";
+            this.dtAtualDataGridViewTextBoxColumn.Name = "dtAtualDataGridViewTextBoxColumn";
+            this.dtAtualDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dtHojeDataGridViewTextBoxColumn
+            // enderecoVoceDataGridViewTextBoxColumn
             // 
-            this.dtHojeDataGridViewTextBoxColumn.DataPropertyName = "DtHoje";
-            this.dtHojeDataGridViewTextBoxColumn.HeaderText = "DtHoje";
-            this.dtHojeDataGridViewTextBoxColumn.Name = "dtHojeDataGridViewTextBoxColumn";
-            // 
-            // enderecoDataGridViewTextBoxColumn
-            // 
-            this.enderecoDataGridViewTextBoxColumn.DataPropertyName = "Endereco";
-            this.enderecoDataGridViewTextBoxColumn.HeaderText = "Endereco";
-            this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
+            this.enderecoVoceDataGridViewTextBoxColumn.DataPropertyName = "EnderecoVoce";
+            this.enderecoVoceDataGridViewTextBoxColumn.HeaderText = "Seu Endereço";
+            this.enderecoVoceDataGridViewTextBoxColumn.Name = "enderecoVoceDataGridViewTextBoxColumn";
+            this.enderecoVoceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // telFixoDataGridViewTextBoxColumn
             // 
             this.telFixoDataGridViewTextBoxColumn.DataPropertyName = "TelFixo";
-            this.telFixoDataGridViewTextBoxColumn.HeaderText = "TelFixo";
+            this.telFixoDataGridViewTextBoxColumn.HeaderText = "Telefone Fixo";
             this.telFixoDataGridViewTextBoxColumn.Name = "telFixoDataGridViewTextBoxColumn";
+            this.telFixoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // telCelDataGridViewImageColumn
+            // operadoraDataGridViewTextBoxColumn
             // 
-            this.telCelDataGridViewImageColumn.DataPropertyName = "TelCel";
-            this.telCelDataGridViewImageColumn.HeaderText = "TelCel";
-            this.telCelDataGridViewImageColumn.Name = "telCelDataGridViewImageColumn";
+            this.operadoraDataGridViewTextBoxColumn.DataPropertyName = "Operadora";
+            this.operadoraDataGridViewTextBoxColumn.HeaderText = "Sua Operadora";
+            this.operadoraDataGridViewTextBoxColumn.Name = "operadoraDataGridViewTextBoxColumn";
+            this.operadoraDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telCelDataGridViewTextBoxColumn
+            // 
+            this.telCelDataGridViewTextBoxColumn.DataPropertyName = "TelCel";
+            this.telCelDataGridViewTextBoxColumn.HeaderText = "Telefone Celular";
+            this.telCelDataGridViewTextBoxColumn.Name = "telCelDataGridViewTextBoxColumn";
+            this.telCelDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // textoDataGridViewTextBoxColumn
             // 
             this.textoDataGridViewTextBoxColumn.DataPropertyName = "Texto";
-            this.textoDataGridViewTextBoxColumn.HeaderText = "Texto";
+            this.textoDataGridViewTextBoxColumn.HeaderText = "Seu Texto";
             this.textoDataGridViewTextBoxColumn.Name = "textoDataGridViewTextBoxColumn";
+            this.textoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fotoVoceDataGridViewImageColumn
+            // 
+            this.fotoVoceDataGridViewImageColumn.DataPropertyName = "FotoVoce";
+            this.fotoVoceDataGridViewImageColumn.HeaderText = "Sua Foto";
+            this.fotoVoceDataGridViewImageColumn.Name = "fotoVoceDataGridViewImageColumn";
+            this.fotoVoceDataGridViewImageColumn.ReadOnly = true;
             // 
             // tbVoceBindingSource
             // 
@@ -283,15 +313,17 @@
             // 
             // rcbTexto
             // 
-            this.rcbTexto.Location = new System.Drawing.Point(145, 184);
+            this.rcbTexto.AutoWordSelection = true;
+            this.rcbTexto.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rcbTexto.Location = new System.Drawing.Point(145, 187);
             this.rcbTexto.Name = "rcbTexto";
-            this.rcbTexto.Size = new System.Drawing.Size(514, 204);
+            this.rcbTexto.Size = new System.Drawing.Size(563, 201);
             this.rcbTexto.TabIndex = 58;
             this.rcbTexto.Text = "";
             // 
             // mskCelular
             // 
-            this.mskCelular.Location = new System.Drawing.Point(439, 153);
+            this.mskCelular.Location = new System.Drawing.Point(450, 154);
             this.mskCelular.Mask = "+55 (99) 99999-9999";
             this.mskCelular.Name = "mskCelular";
             this.mskCelular.Size = new System.Drawing.Size(107, 20);
@@ -307,7 +339,7 @@
             "VIVO"});
             this.cbCelular.Location = new System.Drawing.Point(380, 153);
             this.cbCelular.Name = "cbCelular";
-            this.cbCelular.Size = new System.Drawing.Size(53, 21);
+            this.cbCelular.Size = new System.Drawing.Size(64, 21);
             this.cbCelular.TabIndex = 54;
             // 
             // lblCelular
@@ -336,7 +368,7 @@
             this.label1.BackColor = System.Drawing.Color.Blue;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(94, 154);
+            this.label1.Location = new System.Drawing.Point(98, 154);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 20);
             this.label1.TabIndex = 51;
@@ -348,7 +380,7 @@
             this.lblEndereco.BackColor = System.Drawing.Color.Blue;
             this.lblEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEndereco.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblEndereco.Location = new System.Drawing.Point(94, 127);
+            this.lblEndereco.Location = new System.Drawing.Point(101, 127);
             this.lblEndereco.Name = "lblEndereco";
             this.lblEndereco.Size = new System.Drawing.Size(51, 20);
             this.lblEndereco.TabIndex = 50;
@@ -374,7 +406,7 @@
             this.lblNome.BackColor = System.Drawing.Color.Blue;
             this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNome.Location = new System.Drawing.Point(95, 101);
+            this.lblNome.Location = new System.Drawing.Point(100, 101);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(60, 20);
             this.lblNome.TabIndex = 47;
@@ -386,48 +418,25 @@
             this.lblNascimento.BackColor = System.Drawing.Color.Blue;
             this.lblNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNascimento.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNascimento.Location = new System.Drawing.Point(254, 75);
+            this.lblNascimento.Location = new System.Drawing.Point(263, 75);
             this.lblNascimento.Name = "lblNascimento";
-            this.lblNascimento.Size = new System.Drawing.Size(175, 20);
+            this.lblNascimento.Size = new System.Drawing.Size(177, 20);
             this.lblNascimento.TabIndex = 45;
-            this.lblNascimento.Text = "Data de nascimento:";
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Location = new System.Drawing.Point(168, 75);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(80, 20);
-            this.txtCodigo.TabIndex = 44;
-            // 
-            // lblCodigo
-            // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.BackColor = System.Drawing.Color.Blue;
-            this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCodigo.Location = new System.Drawing.Point(92, 75);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(70, 20);
-            this.lblCodigo.TabIndex = 43;
-            this.lblCodigo.Text = "Código:";
+            this.lblNascimento.Text = "Data de Nascimento:";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Blue;
+            this.panel1.Controls.Add(this.picCorretor);
+            this.panel1.Controls.Add(this.dgvVoce);
+            this.panel1.Controls.Add(this.txtUsuario);
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.dtpHoje);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.txtIdade);
             this.panel1.Controls.Add(this.txtNome);
-            this.panel1.Controls.Add(this.btnJustificado);
-            this.panel1.Controls.Add(this.btnDireita);
-            this.panel1.Controls.Add(this.btnCentralizado);
-            this.panel1.Controls.Add(this.btnEsquerda);
-            this.panel1.Controls.Add(this.picImagem);
             this.panel1.Controls.Add(this.dtpNascimento);
-            this.panel1.Controls.Add(this.btnSublinhado);
-            this.panel1.Controls.Add(this.btnItalico);
-            this.panel1.Controls.Add(this.btnNegrito);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.picSeta1);
             this.panel1.Controls.Add(this.rcbTexto);
@@ -445,8 +454,40 @@
             this.panel1.Size = new System.Drawing.Size(984, 711);
             this.panel1.TabIndex = 70;
             // 
+            // picCorretor
+            // 
+            this.picCorretor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picCorretor.Image = global::Login.Properties.Resources.professor2;
+            this.picCorretor.Location = new System.Drawing.Point(95, 239);
+            this.picCorretor.Name = "picCorretor";
+            this.picCorretor.Size = new System.Drawing.Size(45, 50);
+            this.picCorretor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCorretor.TabIndex = 172;
+            this.picCorretor.TabStop = false;
+            this.toolTip1.SetToolTip(this.picCorretor, "Clique aqui para Corretor Ortográfico");
+            this.picCorretor.Click += new System.EventHandler(this.picCorretor_Click);
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(197, 75);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(56, 20);
+            this.txtUsuario.TabIndex = 171;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(100, 76);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(98, 20);
+            this.label6.TabIndex = 170;
+            this.label6.Text = "Usuário(a):";
+            // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.Plum;
             this.panel3.Controls.Add(this.pictureBox33);
             this.panel3.Controls.Add(this.pictureBox34);
             this.panel3.Controls.Add(this.pictureBox35);
@@ -481,9 +522,9 @@
             this.panel3.Controls.Add(this.picMae);
             this.panel3.Controls.Add(this.picConjuge);
             this.panel3.Controls.Add(this.picFilho);
-            this.panel3.Location = new System.Drawing.Point(3, 65);
+            this.panel3.Location = new System.Drawing.Point(0, 65);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(89, 638);
+            this.panel3.Size = new System.Drawing.Size(89, 646);
             this.panel3.TabIndex = 168;
             // 
             // pictureBox33
@@ -711,6 +752,7 @@
             this.picReitor.TabIndex = 121;
             this.picReitor.TabStop = false;
             this.toolTip1.SetToolTip(this.picReitor, "Clique aqui para acessar sobre Reitor(a)");
+            this.picReitor.Click += new System.EventHandler(this.picReitor_Click);
             // 
             // picProfessor
             // 
@@ -724,12 +766,13 @@
             this.picProfessor.TabIndex = 120;
             this.picProfessor.TabStop = false;
             this.toolTip1.SetToolTip(this.picProfessor, "Clique aqui para acessar sobre Professor(a)");
+            this.picProfessor.Click += new System.EventHandler(this.picProfessor_Click);
             // 
             // picMateria
             // 
             this.picMateria.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.picMateria.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.picMateria.Image = global::Login.Properties.Resources.materia;
+            this.picMateria.Image = global::Login.Properties.Resources.professor4;
             this.picMateria.Location = new System.Drawing.Point(10, 194);
             this.picMateria.Name = "picMateria";
             this.picMateria.Size = new System.Drawing.Size(30, 30);
@@ -737,6 +780,7 @@
             this.picMateria.TabIndex = 119;
             this.picMateria.TabStop = false;
             this.toolTip1.SetToolTip(this.picMateria, "Clique aqui para acessar sobre Matéria");
+            this.picMateria.Click += new System.EventHandler(this.picMateria_Click);
             // 
             // picCurso
             // 
@@ -749,7 +793,8 @@
             this.picCurso.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picCurso.TabIndex = 118;
             this.picCurso.TabStop = false;
-            this.toolTip1.SetToolTip(this.picCurso, "Clique aqui para acessar sobre Curso");
+            this.toolTip1.SetToolTip(this.picCurso, "Clique aqui para acessar sobre seu Curso");
+            this.picCurso.Click += new System.EventHandler(this.picCurso_Click);
             // 
             // picLocalFormacao
             // 
@@ -762,7 +807,8 @@
             this.picLocalFormacao.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLocalFormacao.TabIndex = 117;
             this.picLocalFormacao.TabStop = false;
-            this.toolTip1.SetToolTip(this.picLocalFormacao, "Clique aqui para acessar sobre Local de Formação");
+            this.toolTip1.SetToolTip(this.picLocalFormacao, "Clique aqui para acessar sobre seu Local de Formação");
+            this.picLocalFormacao.Click += new System.EventHandler(this.picLocalFormacao_Click);
             // 
             // picColegas
             // 
@@ -776,6 +822,7 @@
             this.picColegas.TabIndex = 116;
             this.picColegas.TabStop = false;
             this.toolTip1.SetToolTip(this.picColegas, "Clique aqui para acessar sobre Colega");
+            this.picColegas.Click += new System.EventHandler(this.picColegas_Click_1);
             // 
             // picPatrao
             // 
@@ -789,6 +836,7 @@
             this.picPatrao.TabIndex = 115;
             this.picPatrao.TabStop = false;
             this.toolTip1.SetToolTip(this.picPatrao, "Clique aqui para acessar sobre Patrão");
+            this.picPatrao.Click += new System.EventHandler(this.picPatrao_Click_1);
             // 
             // picProfissao
             // 
@@ -801,7 +849,8 @@
             this.picProfissao.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picProfissao.TabIndex = 114;
             this.picProfissao.TabStop = false;
-            this.toolTip1.SetToolTip(this.picProfissao, "Clique aqui para acessar sobre Profissão");
+            this.toolTip1.SetToolTip(this.picProfissao, "Clique aqui para acessar sobre sua Profissão");
+            this.picProfissao.Click += new System.EventHandler(this.picProfissao_Click_1);
             // 
             // picIrmao
             // 
@@ -815,6 +864,7 @@
             this.picIrmao.TabIndex = 113;
             this.picIrmao.TabStop = false;
             this.toolTip1.SetToolTip(this.picIrmao, "Clique aqui para acessar sobre Irmã(o)");
+            this.picIrmao.Click += new System.EventHandler(this.picIrmao_Click_1);
             // 
             // picPai
             // 
@@ -827,7 +877,8 @@
             this.picPai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picPai.TabIndex = 112;
             this.picPai.TabStop = false;
-            this.toolTip1.SetToolTip(this.picPai, "Clique aqui para acessar sobre Pai");
+            this.toolTip1.SetToolTip(this.picPai, "Clique aqui para acessar sobre seu Pai");
+            this.picPai.Click += new System.EventHandler(this.picPai_Click_1);
             // 
             // picMae
             // 
@@ -840,7 +891,8 @@
             this.picMae.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picMae.TabIndex = 111;
             this.picMae.TabStop = false;
-            this.toolTip1.SetToolTip(this.picMae, "Clique aqui para acessar sobre Mãe");
+            this.toolTip1.SetToolTip(this.picMae, "Clique aqui para acessar sobre sua Mãe");
+            this.picMae.Click += new System.EventHandler(this.picMae_Click_1);
             // 
             // picConjuge
             // 
@@ -853,7 +905,8 @@
             this.picConjuge.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picConjuge.TabIndex = 110;
             this.picConjuge.TabStop = false;
-            this.toolTip1.SetToolTip(this.picConjuge, "Clique aqui para acessar sobre Côjuge");
+            this.toolTip1.SetToolTip(this.picConjuge, "Clique aqui para acessar sobre seu Cônjuge");
+            this.picConjuge.Click += new System.EventHandler(this.picConjuge_Click_1);
             // 
             // picFilho
             // 
@@ -867,13 +920,14 @@
             this.picFilho.TabIndex = 109;
             this.picFilho.TabStop = false;
             this.toolTip1.SetToolTip(this.picFilho, "Clique aqui para acessar sobre Filho(a)");
+            this.picFilho.Click += new System.EventHandler(this.picFilho_Click_1);
             // 
             // dtpHoje
             // 
             this.dtpHoje.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpHoje.Location = new System.Drawing.Point(599, 102);
             this.dtpHoje.Name = "dtpHoje";
-            this.dtpHoje.Size = new System.Drawing.Size(111, 20);
+            this.dtpHoje.Size = new System.Drawing.Size(109, 20);
             this.dtpHoje.TabIndex = 167;
             // 
             // label4
@@ -890,124 +944,19 @@
             // 
             // txtIdade
             // 
-            this.txtIdade.Location = new System.Drawing.Point(608, 76);
+            this.txtIdade.Location = new System.Drawing.Point(618, 75);
             this.txtIdade.Name = "txtIdade";
-            this.txtIdade.Size = new System.Drawing.Size(100, 20);
+            this.txtIdade.Size = new System.Drawing.Size(90, 20);
             this.txtIdade.TabIndex = 164;
-            // 
-            // btnJustificado
-            // 
-            this.btnJustificado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnJustificado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnJustificado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnJustificado.Location = new System.Drawing.Point(666, 356);
-            this.btnJustificado.Name = "btnJustificado";
-            this.btnJustificado.Size = new System.Drawing.Size(43, 32);
-            this.btnJustificado.TabIndex = 163;
-            this.toolTip1.SetToolTip(this.btnJustificado, "Alinhamento justificado");
-            this.btnJustificado.UseVisualStyleBackColor = true;
-            // 
-            // btnDireita
-            // 
-            this.btnDireita.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnDireita.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnDireita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDireita.Location = new System.Drawing.Point(666, 313);
-            this.btnDireita.Name = "btnDireita";
-            this.btnDireita.Size = new System.Drawing.Size(43, 32);
-            this.btnDireita.TabIndex = 162;
-            this.toolTip1.SetToolTip(this.btnDireita, "Alinhamento à direita");
-            this.btnDireita.UseVisualStyleBackColor = true;
-            // 
-            // btnCentralizado
-            // 
-            this.btnCentralizado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnCentralizado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnCentralizado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCentralizado.Location = new System.Drawing.Point(665, 226);
-            this.btnCentralizado.Name = "btnCentralizado";
-            this.btnCentralizado.Size = new System.Drawing.Size(44, 32);
-            this.btnCentralizado.TabIndex = 161;
-            this.toolTip1.SetToolTip(this.btnCentralizado, "Alinhamento à esuqerda");
-            this.btnCentralizado.UseVisualStyleBackColor = true;
-            // 
-            // btnEsquerda
-            // 
-            this.btnEsquerda.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnEsquerda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Magenta;
-            this.btnEsquerda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEsquerda.Location = new System.Drawing.Point(666, 269);
-            this.btnEsquerda.Name = "btnEsquerda";
-            this.btnEsquerda.Size = new System.Drawing.Size(44, 32);
-            this.btnEsquerda.TabIndex = 160;
-            this.toolTip1.SetToolTip(this.btnEsquerda, "Alinhamento centralizado");
-            this.btnEsquerda.UseVisualStyleBackColor = true;
-            // 
-            // picImagem
-            // 
-            this.picImagem.Image = global::Login.Properties.Resources.imagem;
-            this.picImagem.Location = new System.Drawing.Point(665, 185);
-            this.picImagem.Name = "picImagem";
-            this.picImagem.Size = new System.Drawing.Size(44, 32);
-            this.picImagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picImagem.TabIndex = 159;
-            this.picImagem.TabStop = false;
-            this.toolTip1.SetToolTip(this.picImagem, "Insira uma imagem no seu texto");
             // 
             // dtpNascimento
             // 
             this.dtpNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNascimento.Location = new System.Drawing.Point(435, 76);
+            this.dtpNascimento.Location = new System.Drawing.Point(439, 75);
             this.dtpNascimento.Name = "dtpNascimento";
-            this.dtpNascimento.Size = new System.Drawing.Size(111, 20);
+            this.dtpNascimento.Size = new System.Drawing.Size(109, 20);
             this.dtpNascimento.TabIndex = 154;
             this.dtpNascimento.ValueChanged += new System.EventHandler(this.dtpNascimento_ValueChanged);
-            // 
-            // btnSublinhado
-            // 
-            this.btnSublinhado.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.btnSublinhado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime;
-            this.btnSublinhado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Magenta;
-            this.btnSublinhado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSublinhado.Font = new System.Drawing.Font("Arial Black", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSublinhado.Location = new System.Drawing.Point(95, 339);
-            this.btnSublinhado.Name = "btnSublinhado";
-            this.btnSublinhado.Size = new System.Drawing.Size(45, 49);
-            this.btnSublinhado.TabIndex = 108;
-            this.btnSublinhado.Text = "S";
-            this.toolTip1.SetToolTip(this.btnSublinhado, "Sublinhado");
-            this.btnSublinhado.UseVisualStyleBackColor = true;
-            // 
-            // btnItalico
-            // 
-            this.btnItalico.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.btnItalico.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime;
-            this.btnItalico.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
-            this.btnItalico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnItalico.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnItalico.Location = new System.Drawing.Point(95, 288);
-            this.btnItalico.Name = "btnItalico";
-            this.btnItalico.Size = new System.Drawing.Size(45, 49);
-            this.btnItalico.TabIndex = 107;
-            this.btnItalico.Text = "I";
-            this.toolTip1.SetToolTip(this.btnItalico, "Itálico");
-            this.btnItalico.UseVisualStyleBackColor = true;
-            // 
-            // btnNegrito
-            // 
-            this.btnNegrito.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.btnNegrito.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime;
-            this.btnNegrito.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.btnNegrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNegrito.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNegrito.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnNegrito.Location = new System.Drawing.Point(94, 237);
-            this.btnNegrito.Name = "btnNegrito";
-            this.btnNegrito.Size = new System.Drawing.Size(45, 49);
-            this.btnNegrito.TabIndex = 106;
-            this.btnNegrito.Text = "N";
-            this.toolTip1.SetToolTip(this.btnNegrito, "Negrito");
-            this.btnNegrito.UseVisualStyleBackColor = true;
             // 
             // pictureBox2
             // 
@@ -1025,7 +974,7 @@
             // 
             this.picSeta1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.picSeta1.Image = global::Login.Properties.Resources.set05;
-            this.picSeta1.Location = new System.Drawing.Point(95, 185);
+            this.picSeta1.Location = new System.Drawing.Point(95, 187);
             this.picSeta1.Name = "picSeta1";
             this.picSeta1.Size = new System.Drawing.Size(45, 49);
             this.picSeta1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1038,9 +987,9 @@
             this.picFoto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.picFoto.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.picFoto.Image = global::Login.Properties.Resources.usuaria2;
-            this.picFoto.Location = new System.Drawing.Point(726, 74);
+            this.picFoto.Location = new System.Drawing.Point(726, 76);
             this.picFoto.Name = "picFoto";
-            this.picFoto.Size = new System.Drawing.Size(246, 314);
+            this.picFoto.Size = new System.Drawing.Size(246, 312);
             this.picFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picFoto.TabIndex = 69;
             this.picFoto.TabStop = false;
@@ -1050,20 +999,101 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Controls.Add(this.picExcluir);
-            this.panel2.Controls.Add(this.picAtualizar);
+            this.panel2.Controls.Add(this.picImprimir);
             this.panel2.Controls.Add(this.picSalvar);
-            this.panel2.Controls.Add(this.picPesquisar);
-            this.panel2.Controls.Add(this.picBancoDados);
-            this.panel2.Controls.Add(this.txtPesquisar);
+            this.panel2.Controls.Add(this.picAtualizar);
+            this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.dtpInicio);
+            this.panel2.Controls.Add(this.dtpFim);
+            this.panel2.Controls.Add(this.picExcluir);
+            this.panel2.Controls.Add(this.picPesquisar);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(984, 65);
             this.panel2.TabIndex = 67;
             // 
+            // picImprimir
+            // 
+            this.picImprimir.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picImprimir.Image = global::Login.Properties.Resources.imprimir;
+            this.picImprimir.Location = new System.Drawing.Point(9, 3);
+            this.picImprimir.Name = "picImprimir";
+            this.picImprimir.Size = new System.Drawing.Size(105, 57);
+            this.picImprimir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picImprimir.TabIndex = 178;
+            this.picImprimir.TabStop = false;
+            this.toolTip1.SetToolTip(this.picImprimir, "Clique aqui para imprimir seus documentos.");
+            this.picImprimir.Click += new System.EventHandler(this.picImprimir_Click);
+            // 
+            // picSalvar
+            // 
+            this.picSalvar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picSalvar.Image = global::Login.Properties.Resources.aquivos;
+            this.picSalvar.Location = new System.Drawing.Point(425, 4);
+            this.picSalvar.Name = "picSalvar";
+            this.picSalvar.Size = new System.Drawing.Size(96, 56);
+            this.picSalvar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSalvar.TabIndex = 177;
+            this.picSalvar.TabStop = false;
+            this.toolTip1.SetToolTip(this.picSalvar, "Clique aqui para salvar seus dados.");
+            this.picSalvar.Click += new System.EventHandler(this.picSalvar_Click);
+            // 
+            // picAtualizar
+            // 
+            this.picAtualizar.BackColor = System.Drawing.Color.Transparent;
+            this.picAtualizar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picAtualizar.Image = global::Login.Properties.Resources.atualizar;
+            this.picAtualizar.Location = new System.Drawing.Point(530, 4);
+            this.picAtualizar.Name = "picAtualizar";
+            this.picAtualizar.Size = new System.Drawing.Size(95, 55);
+            this.picAtualizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picAtualizar.TabIndex = 176;
+            this.picAtualizar.TabStop = false;
+            this.toolTip1.SetToolTip(this.picAtualizar, "Clique aqui para atualizar os seus dados.");
+            this.picAtualizar.Click += new System.EventHandler(this.picAtualizar_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(741, 39);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 18);
+            this.label5.TabIndex = 175;
+            this.label5.Text = "Até:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(744, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 18);
+            this.label2.TabIndex = 174;
+            this.label2.Text = "De:";
+            // 
+            // dtpInicio
+            // 
+            this.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpInicio.Location = new System.Drawing.Point(780, 10);
+            this.dtpInicio.Name = "dtpInicio";
+            this.dtpInicio.Size = new System.Drawing.Size(111, 20);
+            this.dtpInicio.TabIndex = 173;
+            // 
+            // dtpFim
+            // 
+            this.dtpFim.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFim.Location = new System.Drawing.Point(780, 38);
+            this.dtpFim.Name = "dtpFim";
+            this.dtpFim.Size = new System.Drawing.Size(111, 20);
+            this.dtpFim.TabIndex = 172;
+            // 
             // picExcluir
             // 
+            this.picExcluir.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.picExcluir.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.picExcluir.Image = global::Login.Properties.Resources.excuir;
             this.picExcluir.Location = new System.Drawing.Point(632, 4);
@@ -1072,34 +1102,12 @@
             this.picExcluir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picExcluir.TabIndex = 170;
             this.picExcluir.TabStop = false;
-            this.toolTip1.SetToolTip(this.picExcluir, "Clique aqui para Excluir seus Dados");
-            // 
-            // picAtualizar
-            // 
-            this.picAtualizar.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.picAtualizar.Image = global::Login.Properties.Resources.atualizar;
-            this.picAtualizar.Location = new System.Drawing.Point(531, 4);
-            this.picAtualizar.Name = "picAtualizar";
-            this.picAtualizar.Size = new System.Drawing.Size(98, 56);
-            this.picAtualizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picAtualizar.TabIndex = 169;
-            this.picAtualizar.TabStop = false;
-            this.toolTip1.SetToolTip(this.picAtualizar, "Clique aqui para Atualizar seus Dados");
-            // 
-            // picSalvar
-            // 
-            this.picSalvar.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.picSalvar.Image = global::Login.Properties.Resources.aquivos;
-            this.picSalvar.Location = new System.Drawing.Point(428, 5);
-            this.picSalvar.Name = "picSalvar";
-            this.picSalvar.Size = new System.Drawing.Size(95, 56);
-            this.picSalvar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picSalvar.TabIndex = 168;
-            this.picSalvar.TabStop = false;
-            this.toolTip1.SetToolTip(this.picSalvar, "Clique aqui para Salvar seus Dados");
+            this.toolTip1.SetToolTip(this.picExcluir, "Clique aqui para excluir seus dados.");
+            this.picExcluir.Click += new System.EventHandler(this.picExcluir_Click);
             // 
             // picPesquisar
             // 
+            this.picPesquisar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.picPesquisar.Image = global::Login.Properties.Resources.pesquisar;
             this.picPesquisar.Location = new System.Drawing.Point(897, 5);
             this.picPesquisar.Name = "picPesquisar";
@@ -1107,70 +1115,51 @@
             this.picPesquisar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picPesquisar.TabIndex = 71;
             this.picPesquisar.TabStop = false;
-            this.toolTip1.SetToolTip(this.picPesquisar, "Clique aqui para Pesquisar");
-            // 
-            // picBancoDados
-            // 
-            this.picBancoDados.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.picBancoDados.Image = global::Login.Properties.Resources.bancoDados;
-            this.picBancoDados.Location = new System.Drawing.Point(9, 3);
-            this.picBancoDados.Name = "picBancoDados";
-            this.picBancoDados.Size = new System.Drawing.Size(135, 56);
-            this.picBancoDados.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBancoDados.TabIndex = 70;
-            this.picBancoDados.TabStop = false;
-            this.toolTip1.SetToolTip(this.picBancoDados, "Conectar Banco de Dados");
-            // 
-            // txtPesquisar
-            // 
-            this.txtPesquisar.Location = new System.Drawing.Point(733, 39);
-            this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(158, 20);
-            this.txtPesquisar.TabIndex = 69;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(792, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 22);
-            this.label2.TabIndex = 68;
-            this.label2.Text = "Pesquisar";
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.toolTip1.SetToolTip(this.picPesquisar, "Clique aqui para faze uma Pesquisa de sus dados por datas");
+            this.picPesquisar.Click += new System.EventHandler(this.picPesquisar_Click);
             // 
             // tbVoceTableAdapter
             // 
             this.tbVoceTableAdapter.ClearBeforeFill = true;
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            this.printPreviewDialog1.Load += new System.EventHandler(this.printPreviewDialog1_Load);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
             // frmVoce
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 711);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblEndereco);
             this.Controls.Add(this.txtEndereco);
             this.Controls.Add(this.lblNome);
-            this.Controls.Add(this.txtCodigo);
-            this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.Name = "frmVoce";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Você";
+            this.Text = "Sobre Você...";
             this.Load += new System.EventHandler(this.Voce_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVoce)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbVoceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userLoginDataSet1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCorretor)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
@@ -1206,17 +1195,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.picMae)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picConjuge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFilho)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picImagem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSeta1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picExcluir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAtualizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImprimir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSalvar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAtualizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picExcluir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPesquisar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBancoDados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1225,7 +1213,7 @@
         #endregion
 
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvVoce;
         private System.Windows.Forms.RichTextBox rcbTexto;
         private System.Windows.Forms.MaskedTextBox mskCelular;
         private System.Windows.Forms.ComboBox cbCelular;
@@ -1237,33 +1225,17 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblNascimento;
-        private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.PictureBox picFoto;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox picSeta1;
-        private System.Windows.Forms.Button btnSublinhado;
-        private System.Windows.Forms.Button btnItalico;
-        private System.Windows.Forms.Button btnNegrito;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.DateTimePicker dtpNascimento;
-        private System.Windows.Forms.PictureBox picImagem;
-        private System.Windows.Forms.Button btnJustificado;
-        private System.Windows.Forms.Button btnDireita;
-        private System.Windows.Forms.Button btnCentralizado;
-        private System.Windows.Forms.Button btnEsquerda;
-        private System.Windows.Forms.TextBox txtPesquisar;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtIdade;
         private System.Windows.Forms.DateTimePicker dtpHoje;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox picBancoDados;
         private System.Windows.Forms.PictureBox picPesquisar;
-        private System.Windows.Forms.PictureBox picSalvar;
-        private System.Windows.Forms.PictureBox picAtualizar;
         private System.Windows.Forms.PictureBox picExcluir;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox33;
@@ -1300,18 +1272,34 @@
         private System.Windows.Forms.PictureBox picMae;
         private System.Windows.Forms.PictureBox picConjuge;
         private System.Windows.Forms.PictureBox picFilho;
+        private System.Windows.Forms.DateTimePicker dtpFim;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dtpInicio;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.FontDialog fontDialog1;
+        private System.Windows.Forms.PictureBox picAtualizar;
+        private System.Windows.Forms.PictureBox picSalvar;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.Label label6;
         private UserLoginDataSet1 userLoginDataSet1;
         private System.Windows.Forms.BindingSource tbVoceBindingSource;
         private UserLoginDataSet1TableAdapters.tbVoceTableAdapter tbVoceTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codVoceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codUserDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtNascimentoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idadeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewImageColumn fotoDataGridViewImageColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtHojeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn enderecoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idadeVoceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeVoceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtAtualDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn enderecoVoceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telFixoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewImageColumn telCelDataGridViewImageColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn operadoraDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telCelDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn textoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewImageColumn fotoVoceDataGridViewImageColumn;
+        private System.Windows.Forms.PictureBox picImprimir;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PictureBox picCorretor;
     }
 }

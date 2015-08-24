@@ -45,7 +45,6 @@
             this.btnCentralizado = new System.Windows.Forms.Button();
             this.btnEsquerda = new System.Windows.Forms.Button();
             this.picImagem = new System.Windows.Forms.PictureBox();
-            this.btnIdade = new System.Windows.Forms.Button();
             this.txtIdade = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -93,16 +92,18 @@
             this.picMae = new System.Windows.Forms.PictureBox();
             this.picConjuge = new System.Windows.Forms.PictureBox();
             this.picFilho = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.picFoto = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dtpInicio = new System.Windows.Forms.DateTimePicker();
+            this.dtpFim = new System.Windows.Forms.DateTimePicker();
+            this.picFecharConexao = new System.Windows.Forms.PictureBox();
             this.picExcluir = new System.Windows.Forms.PictureBox();
             this.picAtualizar = new System.Windows.Forms.PictureBox();
             this.picSalvar = new System.Windows.Forms.PictureBox();
             this.picPesquisar = new System.Windows.Forms.PictureBox();
-            this.picBancoDados = new System.Windows.Forms.PictureBox();
-            this.txtPesquisar = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.picFoto = new System.Windows.Forms.PictureBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picImagem)).BeginInit();
@@ -143,19 +144,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.picMae)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picConjuge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFilho)).BeginInit();
-            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFecharConexao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picExcluir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAtualizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSalvar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPesquisar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBancoDados)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Blue;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.rcbTexto);
             this.panel1.Controls.Add(this.mskCelular);
@@ -171,7 +173,6 @@
             this.panel1.Controls.Add(this.btnCentralizado);
             this.panel1.Controls.Add(this.btnEsquerda);
             this.panel1.Controls.Add(this.picImagem);
-            this.panel1.Controls.Add(this.btnIdade);
             this.panel1.Controls.Add(this.txtIdade);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.label2);
@@ -185,7 +186,6 @@
             this.panel1.Controls.Add(this.lblIdade);
             this.panel1.Controls.Add(this.lblNascimento);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.picFoto);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -352,25 +352,6 @@
             this.picImagem.TabStop = false;
             this.toolTip1.SetToolTip(this.picImagem, "Insira uma imagem no seu texto");
             // 
-            // btnIdade
-            // 
-            this.btnIdade.BackColor = System.Drawing.Color.Black;
-            this.btnIdade.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.btnIdade.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnIdade.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Magenta;
-            this.btnIdade.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnIdade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIdade.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIdade.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnIdade.Location = new System.Drawing.Point(604, 122);
-            this.btnIdade.Name = "btnIdade";
-            this.btnIdade.Size = new System.Drawing.Size(101, 27);
-            this.btnIdade.TabIndex = 194;
-            this.btnIdade.Text = "Calcular &idade";
-            this.toolTip1.SetToolTip(this.btnIdade, "Tecle ALT + I para calcular a sua idade");
-            this.btnIdade.UseVisualStyleBackColor = false;
-            this.btnIdade.Click += new System.EventHandler(this.btnIdade_Click);
-            // 
             // txtIdade
             // 
             this.txtIdade.Location = new System.Drawing.Point(605, 71);
@@ -413,7 +394,7 @@
             this.btnSublinhado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Magenta;
             this.btnSublinhado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSublinhado.Font = new System.Drawing.Font("Arial Black", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSublinhado.Location = new System.Drawing.Point(110, 312);
+            this.btnSublinhado.Location = new System.Drawing.Point(110, 316);
             this.btnSublinhado.Name = "btnSublinhado";
             this.btnSublinhado.Size = new System.Drawing.Size(45, 49);
             this.btnSublinhado.TabIndex = 189;
@@ -428,7 +409,7 @@
             this.btnItalico.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
             this.btnItalico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnItalico.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnItalico.Location = new System.Drawing.Point(110, 261);
+            this.btnItalico.Location = new System.Drawing.Point(110, 263);
             this.btnItalico.Name = "btnItalico";
             this.btnItalico.Size = new System.Drawing.Size(45, 49);
             this.btnItalico.TabIndex = 188;
@@ -444,7 +425,7 @@
             this.btnNegrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNegrito.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNegrito.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnNegrito.Location = new System.Drawing.Point(109, 210);
+            this.btnNegrito.Location = new System.Drawing.Point(109, 211);
             this.btnNegrito.Name = "btnNegrito";
             this.btnNegrito.Size = new System.Drawing.Size(45, 49);
             this.btnNegrito.TabIndex = 187;
@@ -456,7 +437,7 @@
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox2.Image = global::Login.Properties.Resources.set05;
-            this.pictureBox2.Location = new System.Drawing.Point(109, 375);
+            this.pictureBox2.Location = new System.Drawing.Point(110, 377);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(45, 49);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -510,6 +491,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.Plum;
             this.panel3.Controls.Add(this.pictureBox33);
             this.panel3.Controls.Add(this.pictureBox34);
             this.panel3.Controls.Add(this.pictureBox35);
@@ -544,9 +526,9 @@
             this.panel3.Controls.Add(this.picMae);
             this.panel3.Controls.Add(this.picConjuge);
             this.panel3.Controls.Add(this.picFilho);
-            this.panel3.Location = new System.Drawing.Point(2, 64);
+            this.panel3.Location = new System.Drawing.Point(0, 64);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(89, 638);
+            this.panel3.Size = new System.Drawing.Size(89, 645);
             this.panel3.TabIndex = 159;
             // 
             // pictureBox33
@@ -945,98 +927,6 @@
             this.toolTip1.SetToolTip(this.picFilho, "Clique aqui para acessar sobre Filho(a)");
             this.picFilho.Click += new System.EventHandler(this.picFilho_Click);
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Black;
-            this.panel4.Controls.Add(this.picExcluir);
-            this.panel4.Controls.Add(this.picAtualizar);
-            this.panel4.Controls.Add(this.picSalvar);
-            this.panel4.Controls.Add(this.picPesquisar);
-            this.panel4.Controls.Add(this.picBancoDados);
-            this.panel4.Controls.Add(this.txtPesquisar);
-            this.panel4.Controls.Add(this.label13);
-            this.panel4.Location = new System.Drawing.Point(-2, -1);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(984, 65);
-            this.panel4.TabIndex = 158;
-            // 
-            // picExcluir
-            // 
-            this.picExcluir.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.picExcluir.Image = global::Login.Properties.Resources.excuir;
-            this.picExcluir.Location = new System.Drawing.Point(632, 4);
-            this.picExcluir.Name = "picExcluir";
-            this.picExcluir.Size = new System.Drawing.Size(90, 56);
-            this.picExcluir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picExcluir.TabIndex = 170;
-            this.picExcluir.TabStop = false;
-            this.toolTip1.SetToolTip(this.picExcluir, "Clique aqui para Excluir seus Dados");
-            // 
-            // picAtualizar
-            // 
-            this.picAtualizar.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.picAtualizar.Image = global::Login.Properties.Resources.atualizar;
-            this.picAtualizar.Location = new System.Drawing.Point(531, 4);
-            this.picAtualizar.Name = "picAtualizar";
-            this.picAtualizar.Size = new System.Drawing.Size(98, 56);
-            this.picAtualizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picAtualizar.TabIndex = 169;
-            this.picAtualizar.TabStop = false;
-            this.toolTip1.SetToolTip(this.picAtualizar, "Clique aqui para Atualizar seus Dados");
-            // 
-            // picSalvar
-            // 
-            this.picSalvar.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.picSalvar.Image = global::Login.Properties.Resources.aquivos;
-            this.picSalvar.Location = new System.Drawing.Point(428, 5);
-            this.picSalvar.Name = "picSalvar";
-            this.picSalvar.Size = new System.Drawing.Size(95, 56);
-            this.picSalvar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picSalvar.TabIndex = 168;
-            this.picSalvar.TabStop = false;
-            this.toolTip1.SetToolTip(this.picSalvar, "Clique aqui para Salvar seus Dados");
-            // 
-            // picPesquisar
-            // 
-            this.picPesquisar.Image = global::Login.Properties.Resources.pesquisar;
-            this.picPesquisar.Location = new System.Drawing.Point(897, 5);
-            this.picPesquisar.Name = "picPesquisar";
-            this.picPesquisar.Size = new System.Drawing.Size(75, 57);
-            this.picPesquisar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picPesquisar.TabIndex = 71;
-            this.picPesquisar.TabStop = false;
-            this.toolTip1.SetToolTip(this.picPesquisar, "Clique aqui para Pesquisar");
-            // 
-            // picBancoDados
-            // 
-            this.picBancoDados.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.picBancoDados.Image = global::Login.Properties.Resources.bancoDados;
-            this.picBancoDados.Location = new System.Drawing.Point(9, 3);
-            this.picBancoDados.Name = "picBancoDados";
-            this.picBancoDados.Size = new System.Drawing.Size(135, 56);
-            this.picBancoDados.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBancoDados.TabIndex = 70;
-            this.picBancoDados.TabStop = false;
-            this.toolTip1.SetToolTip(this.picBancoDados, "Conectar Banco de Dados");
-            // 
-            // txtPesquisar
-            // 
-            this.txtPesquisar.Location = new System.Drawing.Point(733, 39);
-            this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(158, 20);
-            this.txtPesquisar.TabIndex = 69;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label13.Location = new System.Drawing.Point(792, 9);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(104, 22);
-            this.label13.TabIndex = 68;
-            this.label13.Text = "Pesquisar";
-            // 
             // picFoto
             // 
             this.picFoto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -1051,14 +941,133 @@
             this.toolTip1.SetToolTip(this.picFoto, "Clique aqui para carregar uma foto");
             this.picFoto.Click += new System.EventHandler(this.picFoto_Click);
             // 
-            // Irmaos
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.dtpInicio);
+            this.panel2.Controls.Add(this.dtpFim);
+            this.panel2.Controls.Add(this.picFecharConexao);
+            this.panel2.Controls.Add(this.picExcluir);
+            this.panel2.Controls.Add(this.picAtualizar);
+            this.panel2.Controls.Add(this.picSalvar);
+            this.panel2.Controls.Add(this.picPesquisar);
+            this.panel2.Location = new System.Drawing.Point(-2, -1);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(984, 65);
+            this.panel2.TabIndex = 200;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(734, 37);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 18);
+            this.label3.TabIndex = 179;
+            this.label3.Text = "Até:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(737, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(32, 18);
+            this.label7.TabIndex = 178;
+            this.label7.Text = "De:";
+            // 
+            // dtpInicio
+            // 
+            this.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpInicio.Location = new System.Drawing.Point(773, 8);
+            this.dtpInicio.Name = "dtpInicio";
+            this.dtpInicio.Size = new System.Drawing.Size(111, 20);
+            this.dtpInicio.TabIndex = 177;
+            // 
+            // dtpFim
+            // 
+            this.dtpFim.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFim.Location = new System.Drawing.Point(773, 36);
+            this.dtpFim.Name = "dtpFim";
+            this.dtpFim.Size = new System.Drawing.Size(111, 20);
+            this.dtpFim.TabIndex = 176;
+            // 
+            // picFecharConexao
+            // 
+            this.picFecharConexao.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picFecharConexao.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.picFecharConexao.Image = global::Login.Properties.Resources.fecharConexao;
+            this.picFecharConexao.Location = new System.Drawing.Point(6, 4);
+            this.picFecharConexao.Name = "picFecharConexao";
+            this.picFecharConexao.Size = new System.Drawing.Size(121, 56);
+            this.picFecharConexao.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picFecharConexao.TabIndex = 172;
+            this.picFecharConexao.TabStop = false;
+            this.toolTip1.SetToolTip(this.picFecharConexao, "Fechar conexão com o Banco de Dados");
+            // 
+            // picExcluir
+            // 
+            this.picExcluir.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picExcluir.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.picExcluir.Image = global::Login.Properties.Resources.excuir;
+            this.picExcluir.Location = new System.Drawing.Point(632, 4);
+            this.picExcluir.Name = "picExcluir";
+            this.picExcluir.Size = new System.Drawing.Size(90, 56);
+            this.picExcluir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picExcluir.TabIndex = 170;
+            this.picExcluir.TabStop = false;
+            this.toolTip1.SetToolTip(this.picExcluir, "Clique aqui para Excluir seus Dados");
+            // 
+            // picAtualizar
+            // 
+            this.picAtualizar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picAtualizar.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.picAtualizar.Image = global::Login.Properties.Resources.atualizar;
+            this.picAtualizar.Location = new System.Drawing.Point(531, 4);
+            this.picAtualizar.Name = "picAtualizar";
+            this.picAtualizar.Size = new System.Drawing.Size(98, 56);
+            this.picAtualizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picAtualizar.TabIndex = 169;
+            this.picAtualizar.TabStop = false;
+            this.toolTip1.SetToolTip(this.picAtualizar, "Clique aqui para Atualizar seus Dados");
+            // 
+            // picSalvar
+            // 
+            this.picSalvar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picSalvar.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.picSalvar.Image = global::Login.Properties.Resources.aquivos;
+            this.picSalvar.Location = new System.Drawing.Point(428, 5);
+            this.picSalvar.Name = "picSalvar";
+            this.picSalvar.Size = new System.Drawing.Size(95, 56);
+            this.picSalvar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSalvar.TabIndex = 168;
+            this.picSalvar.TabStop = false;
+            this.toolTip1.SetToolTip(this.picSalvar, "Clique aqui para Salvar seus Dados");
+            // 
+            // picPesquisar
+            // 
+            this.picPesquisar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picPesquisar.Image = global::Login.Properties.Resources.pesquisar;
+            this.picPesquisar.Location = new System.Drawing.Point(897, 5);
+            this.picPesquisar.Name = "picPesquisar";
+            this.picPesquisar.Size = new System.Drawing.Size(75, 57);
+            this.picPesquisar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPesquisar.TabIndex = 71;
+            this.picPesquisar.TabStop = false;
+            this.toolTip1.SetToolTip(this.picPesquisar, "Clique aqui para Pesquisar");
+            // 
+            // frmIrmaos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 711);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
-            this.Name = "Irmaos";
+            this.Name = "frmIrmaos";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Irmã(o)";
@@ -1103,14 +1112,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.picMae)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picConjuge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFilho)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFoto)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFecharConexao)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picExcluir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAtualizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSalvar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPesquisar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBancoDados)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picFoto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1120,14 +1129,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox picFoto;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.PictureBox picExcluir;
-        private System.Windows.Forms.PictureBox picAtualizar;
-        private System.Windows.Forms.PictureBox picSalvar;
-        private System.Windows.Forms.PictureBox picPesquisar;
-        private System.Windows.Forms.PictureBox picBancoDados;
-        private System.Windows.Forms.TextBox txtPesquisar;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox33;
         private System.Windows.Forms.PictureBox pictureBox34;
@@ -1178,7 +1179,6 @@
         private System.Windows.Forms.Button btnCentralizado;
         private System.Windows.Forms.Button btnEsquerda;
         private System.Windows.Forms.PictureBox picImagem;
-        private System.Windows.Forms.Button btnIdade;
         private System.Windows.Forms.TextBox txtIdade;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label2;
@@ -1191,5 +1191,15 @@
         private System.Windows.Forms.MaskedTextBox mskTelefone;
         private System.Windows.Forms.Label lblIdade;
         private System.Windows.Forms.Label lblNascimento;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker dtpInicio;
+        private System.Windows.Forms.DateTimePicker dtpFim;
+        private System.Windows.Forms.PictureBox picFecharConexao;
+        private System.Windows.Forms.PictureBox picExcluir;
+        private System.Windows.Forms.PictureBox picAtualizar;
+        private System.Windows.Forms.PictureBox picSalvar;
+        private System.Windows.Forms.PictureBox picPesquisar;
     }
 }

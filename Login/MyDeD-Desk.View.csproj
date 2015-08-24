@@ -32,8 +32,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,6 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Diagramacao.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Diagramacao.dbml</DependentUpon>
+    </Compile>
     <Compile Include="frmColega.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +247,14 @@
     <EmbeddedResource Include="wbMyDeDNav.resx">
       <DependentUpon>wbMyDeDNav.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Diagramacao.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Diagramacao.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Diagramacao.dbml.layout">
+      <DependentUpon>Diagramacao.dbml</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -424,12 +441,6 @@
     <None Include="Resources\segredo.gif" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MyDeDClass.Model\MyDeDClass.Model.csproj">
-      <Project>{eaec261b-6f52-4366-a6d8-fbc587e7f738}</Project>
-      <Name>MyDeDClass.Model</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\globo.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -449,6 +460,32 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pesquisar12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fecharConexao.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="PassDlg">
+      <Guid>{1E60F0B1-06DB-4DCD-BB7A-1EC914636B8A}</Guid>
+      <VersionMajor>6</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imprimir.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\professor4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\professor2.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

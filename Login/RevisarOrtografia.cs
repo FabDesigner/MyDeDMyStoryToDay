@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyDeDClass.Model
+namespace Login
 {
-    public class CarregarFoto
+    class RevisarOrtografia
     {
-       
     }
 }

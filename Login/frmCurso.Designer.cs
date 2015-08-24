@@ -66,11 +66,12 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.picSeta1 = new System.Windows.Forms.PictureBox();
             this.picFoto = new System.Windows.Forms.PictureBox();
-            this.picExcluir = new System.Windows.Forms.PictureBox();
-            this.picAtualizar = new System.Windows.Forms.PictureBox();
-            this.picSalvar = new System.Windows.Forms.PictureBox();
-            this.picPesquisar = new System.Windows.Forms.PictureBox();
-            this.picBancoDados = new System.Windows.Forms.PictureBox();
+            this.picSegredo = new System.Windows.Forms.PictureBox();
+            this.picReitor = new System.Windows.Forms.PictureBox();
+            this.picProfessor = new System.Windows.Forms.PictureBox();
+            this.picMateria = new System.Windows.Forms.PictureBox();
+            this.picVoce = new System.Windows.Forms.PictureBox();
+            this.picLocalFormacao = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox33 = new System.Windows.Forms.PictureBox();
             this.pictureBox34 = new System.Windows.Forms.PictureBox();
@@ -92,17 +93,18 @@
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.picSegredo = new System.Windows.Forms.PictureBox();
-            this.picReitor = new System.Windows.Forms.PictureBox();
-            this.picProfessor = new System.Windows.Forms.PictureBox();
-            this.picMateria = new System.Windows.Forms.PictureBox();
-            this.picVoce = new System.Windows.Forms.PictureBox();
-            this.picLocalFormacao = new System.Windows.Forms.PictureBox();
             this.rcbTexto = new System.Windows.Forms.RichTextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dtpInicio = new System.Windows.Forms.DateTimePicker();
+            this.dtpFim = new System.Windows.Forms.DateTimePicker();
+            this.picFecharConexao = new System.Windows.Forms.PictureBox();
+            this.picExcluir = new System.Windows.Forms.PictureBox();
+            this.picAtualizar = new System.Windows.Forms.PictureBox();
+            this.picSalvar = new System.Windows.Forms.PictureBox();
+            this.picPesquisar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picColegas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPatrao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProfissao)).BeginInit();
@@ -115,11 +117,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSeta1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picExcluir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAtualizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSalvar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPesquisar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBancoDados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSegredo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picReitor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picProfessor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMateria)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picVoce)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLocalFormacao)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
@@ -141,14 +144,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSegredo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picReitor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picProfessor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMateria)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picVoce)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLocalFormacao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFecharConexao)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picExcluir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAtualizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSalvar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPesquisar)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpHoje
@@ -576,67 +578,93 @@
             this.toolTip1.SetToolTip(this.picFoto, "Clique aqui para carregar um foto");
             this.picFoto.Click += new System.EventHandler(this.picFoto_Click);
             // 
-            // picExcluir
+            // picSegredo
             // 
-            this.picExcluir.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.picExcluir.Image = global::Login.Properties.Resources.excuir;
-            this.picExcluir.Location = new System.Drawing.Point(632, 4);
-            this.picExcluir.Name = "picExcluir";
-            this.picExcluir.Size = new System.Drawing.Size(90, 56);
-            this.picExcluir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picExcluir.TabIndex = 170;
-            this.picExcluir.TabStop = false;
-            this.toolTip1.SetToolTip(this.picExcluir, "Clique aqui para Excluir seus Dados");
+            this.picSegredo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picSegredo.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.picSegredo.Image = global::Login.Properties.Resources.segredo;
+            this.picSegredo.Location = new System.Drawing.Point(47, 230);
+            this.picSegredo.Name = "picSegredo";
+            this.picSegredo.Size = new System.Drawing.Size(30, 30);
+            this.picSegredo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSegredo.TabIndex = 122;
+            this.picSegredo.TabStop = false;
+            this.toolTip1.SetToolTip(this.picSegredo, "Clique aqui para acessar sobre Segredo");
+            this.picSegredo.Click += new System.EventHandler(this.picSegredo_Click);
             // 
-            // picAtualizar
+            // picReitor
             // 
-            this.picAtualizar.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.picAtualizar.Image = global::Login.Properties.Resources.atualizar;
-            this.picAtualizar.Location = new System.Drawing.Point(531, 4);
-            this.picAtualizar.Name = "picAtualizar";
-            this.picAtualizar.Size = new System.Drawing.Size(98, 56);
-            this.picAtualizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picAtualizar.TabIndex = 169;
-            this.picAtualizar.TabStop = false;
-            this.toolTip1.SetToolTip(this.picAtualizar, "Clique aqui para Atualizar seus Dados");
+            this.picReitor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picReitor.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.picReitor.Image = global::Login.Properties.Resources.reitor;
+            this.picReitor.Location = new System.Drawing.Point(10, 230);
+            this.picReitor.Name = "picReitor";
+            this.picReitor.Size = new System.Drawing.Size(30, 30);
+            this.picReitor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picReitor.TabIndex = 121;
+            this.picReitor.TabStop = false;
+            this.toolTip1.SetToolTip(this.picReitor, "Clique aqui para acessar sobre Reitor(a)");
+            this.picReitor.Click += new System.EventHandler(this.picReitor_Click);
             // 
-            // picSalvar
+            // picProfessor
             // 
-            this.picSalvar.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.picSalvar.Image = global::Login.Properties.Resources.aquivos;
-            this.picSalvar.Location = new System.Drawing.Point(428, 5);
-            this.picSalvar.Name = "picSalvar";
-            this.picSalvar.Size = new System.Drawing.Size(95, 56);
-            this.picSalvar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picSalvar.TabIndex = 168;
-            this.picSalvar.TabStop = false;
-            this.toolTip1.SetToolTip(this.picSalvar, "Clique aqui para Salvar seus Dados");
+            this.picProfessor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picProfessor.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.picProfessor.Image = global::Login.Properties.Resources.professor;
+            this.picProfessor.Location = new System.Drawing.Point(46, 194);
+            this.picProfessor.Name = "picProfessor";
+            this.picProfessor.Size = new System.Drawing.Size(30, 30);
+            this.picProfessor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picProfessor.TabIndex = 120;
+            this.picProfessor.TabStop = false;
+            this.toolTip1.SetToolTip(this.picProfessor, "Clique aqui para acessar sobre Professor(a)");
+            this.picProfessor.Click += new System.EventHandler(this.picProfessor_Click);
             // 
-            // picPesquisar
+            // picMateria
             // 
-            this.picPesquisar.Image = global::Login.Properties.Resources.pesquisar;
-            this.picPesquisar.Location = new System.Drawing.Point(897, 5);
-            this.picPesquisar.Name = "picPesquisar";
-            this.picPesquisar.Size = new System.Drawing.Size(75, 57);
-            this.picPesquisar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picPesquisar.TabIndex = 71;
-            this.picPesquisar.TabStop = false;
-            this.toolTip1.SetToolTip(this.picPesquisar, "Clique aqui para Pesquisar");
+            this.picMateria.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picMateria.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.picMateria.Image = global::Login.Properties.Resources.materia;
+            this.picMateria.Location = new System.Drawing.Point(10, 194);
+            this.picMateria.Name = "picMateria";
+            this.picMateria.Size = new System.Drawing.Size(30, 30);
+            this.picMateria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picMateria.TabIndex = 119;
+            this.picMateria.TabStop = false;
+            this.toolTip1.SetToolTip(this.picMateria, "Clique aqui para acessar sobre Matéria");
+            this.picMateria.Click += new System.EventHandler(this.picMateria_Click);
             // 
-            // picBancoDados
+            // picVoce
             // 
-            this.picBancoDados.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.picBancoDados.Image = global::Login.Properties.Resources.bancoDados;
-            this.picBancoDados.Location = new System.Drawing.Point(9, 3);
-            this.picBancoDados.Name = "picBancoDados";
-            this.picBancoDados.Size = new System.Drawing.Size(135, 56);
-            this.picBancoDados.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBancoDados.TabIndex = 70;
-            this.picBancoDados.TabStop = false;
-            this.toolTip1.SetToolTip(this.picBancoDados, "Conectar Banco de Dados");
+            this.picVoce.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picVoce.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.picVoce.Image = global::Login.Properties.Resources.usuaria2;
+            this.picVoce.Location = new System.Drawing.Point(46, 158);
+            this.picVoce.Name = "picVoce";
+            this.picVoce.Size = new System.Drawing.Size(30, 30);
+            this.picVoce.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picVoce.TabIndex = 118;
+            this.picVoce.TabStop = false;
+            this.toolTip1.SetToolTip(this.picVoce, "Clique aqui para acessar sobre Você");
+            this.picVoce.Click += new System.EventHandler(this.picVoce_Click);
+            // 
+            // picLocalFormacao
+            // 
+            this.picLocalFormacao.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picLocalFormacao.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.picLocalFormacao.Image = global::Login.Properties.Resources.formacao;
+            this.picLocalFormacao.Location = new System.Drawing.Point(10, 158);
+            this.picLocalFormacao.Name = "picLocalFormacao";
+            this.picLocalFormacao.Size = new System.Drawing.Size(30, 30);
+            this.picLocalFormacao.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLocalFormacao.TabIndex = 117;
+            this.picLocalFormacao.TabStop = false;
+            this.toolTip1.SetToolTip(this.picLocalFormacao, "Clique aqui para acessar sobre Local de Formação");
+            this.picLocalFormacao.Click += new System.EventHandler(this.picLocalFormacao_Click);
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.Plum;
             this.panel3.Controls.Add(this.pictureBox33);
             this.panel3.Controls.Add(this.pictureBox34);
             this.panel3.Controls.Add(this.pictureBox35);
@@ -671,9 +699,9 @@
             this.panel3.Controls.Add(this.picMae);
             this.panel3.Controls.Add(this.picConjuge);
             this.panel3.Controls.Add(this.picFilho);
-            this.panel3.Location = new System.Drawing.Point(3, 65);
+            this.panel3.Location = new System.Drawing.Point(0, 64);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(89, 638);
+            this.panel3.Size = new System.Drawing.Size(89, 647);
             this.panel3.TabIndex = 217;
             // 
             // pictureBox33
@@ -876,90 +904,6 @@
             this.pictureBox16.TabIndex = 123;
             this.pictureBox16.TabStop = false;
             // 
-            // picSegredo
-            // 
-            this.picSegredo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picSegredo.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.picSegredo.Image = global::Login.Properties.Resources.segredo;
-            this.picSegredo.Location = new System.Drawing.Point(47, 230);
-            this.picSegredo.Name = "picSegredo";
-            this.picSegredo.Size = new System.Drawing.Size(30, 30);
-            this.picSegredo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picSegredo.TabIndex = 122;
-            this.picSegredo.TabStop = false;
-            this.toolTip1.SetToolTip(this.picSegredo, "Clique aqui para acessar sobre Segredo");
-            this.picSegredo.Click += new System.EventHandler(this.picSegredo_Click);
-            // 
-            // picReitor
-            // 
-            this.picReitor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picReitor.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.picReitor.Image = global::Login.Properties.Resources.reitor;
-            this.picReitor.Location = new System.Drawing.Point(10, 230);
-            this.picReitor.Name = "picReitor";
-            this.picReitor.Size = new System.Drawing.Size(30, 30);
-            this.picReitor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picReitor.TabIndex = 121;
-            this.picReitor.TabStop = false;
-            this.toolTip1.SetToolTip(this.picReitor, "Clique aqui para acessar sobre Reitor(a)");
-            this.picReitor.Click += new System.EventHandler(this.picReitor_Click);
-            // 
-            // picProfessor
-            // 
-            this.picProfessor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picProfessor.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.picProfessor.Image = global::Login.Properties.Resources.professor;
-            this.picProfessor.Location = new System.Drawing.Point(46, 194);
-            this.picProfessor.Name = "picProfessor";
-            this.picProfessor.Size = new System.Drawing.Size(30, 30);
-            this.picProfessor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picProfessor.TabIndex = 120;
-            this.picProfessor.TabStop = false;
-            this.toolTip1.SetToolTip(this.picProfessor, "Clique aqui para acessar sobre Professor(a)");
-            this.picProfessor.Click += new System.EventHandler(this.picProfessor_Click);
-            // 
-            // picMateria
-            // 
-            this.picMateria.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picMateria.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.picMateria.Image = global::Login.Properties.Resources.materia;
-            this.picMateria.Location = new System.Drawing.Point(10, 194);
-            this.picMateria.Name = "picMateria";
-            this.picMateria.Size = new System.Drawing.Size(30, 30);
-            this.picMateria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picMateria.TabIndex = 119;
-            this.picMateria.TabStop = false;
-            this.toolTip1.SetToolTip(this.picMateria, "Clique aqui para acessar sobre Matéria");
-            this.picMateria.Click += new System.EventHandler(this.picMateria_Click);
-            // 
-            // picVoce
-            // 
-            this.picVoce.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picVoce.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.picVoce.Image = global::Login.Properties.Resources.usuaria2;
-            this.picVoce.Location = new System.Drawing.Point(46, 158);
-            this.picVoce.Name = "picVoce";
-            this.picVoce.Size = new System.Drawing.Size(30, 30);
-            this.picVoce.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picVoce.TabIndex = 118;
-            this.picVoce.TabStop = false;
-            this.toolTip1.SetToolTip(this.picVoce, "Clique aqui para acessar sobre Você");
-            this.picVoce.Click += new System.EventHandler(this.picVoce_Click);
-            // 
-            // picLocalFormacao
-            // 
-            this.picLocalFormacao.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picLocalFormacao.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.picLocalFormacao.Image = global::Login.Properties.Resources.formacao;
-            this.picLocalFormacao.Location = new System.Drawing.Point(10, 158);
-            this.picLocalFormacao.Name = "picLocalFormacao";
-            this.picLocalFormacao.Size = new System.Drawing.Size(30, 30);
-            this.picLocalFormacao.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picLocalFormacao.TabIndex = 117;
-            this.picLocalFormacao.TabStop = false;
-            this.toolTip1.SetToolTip(this.picLocalFormacao, "Clique aqui para acessar sobre Local de Formação");
-            this.picLocalFormacao.Click += new System.EventHandler(this.picLocalFormacao_Click);
-            // 
             // rcbTexto
             // 
             this.rcbTexto.Location = new System.Drawing.Point(145, 188);
@@ -979,42 +923,129 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.dtpInicio);
+            this.panel2.Controls.Add(this.dtpFim);
+            this.panel2.Controls.Add(this.picFecharConexao);
             this.panel2.Controls.Add(this.picExcluir);
             this.panel2.Controls.Add(this.picAtualizar);
             this.panel2.Controls.Add(this.picSalvar);
             this.panel2.Controls.Add(this.picPesquisar);
-            this.panel2.Controls.Add(this.picBancoDados);
-            this.panel2.Controls.Add(this.txtPesquisar);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Location = new System.Drawing.Point(0, -1);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(984, 65);
-            this.panel2.TabIndex = 205;
-            // 
-            // txtPesquisar
-            // 
-            this.txtPesquisar.Location = new System.Drawing.Point(733, 39);
-            this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(158, 20);
-            this.txtPesquisar.TabIndex = 69;
+            this.panel2.TabIndex = 218;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(792, 9);
+            this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(734, 37);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 22);
-            this.label2.TabIndex = 68;
-            this.label2.Text = "Pesquisar";
+            this.label2.Size = new System.Drawing.Size(35, 18);
+            this.label2.TabIndex = 179;
+            this.label2.Text = "Até:";
             // 
-            // Curso
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(737, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(32, 18);
+            this.label7.TabIndex = 178;
+            this.label7.Text = "De:";
+            // 
+            // dtpInicio
+            // 
+            this.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpInicio.Location = new System.Drawing.Point(773, 8);
+            this.dtpInicio.Name = "dtpInicio";
+            this.dtpInicio.Size = new System.Drawing.Size(111, 20);
+            this.dtpInicio.TabIndex = 177;
+            // 
+            // dtpFim
+            // 
+            this.dtpFim.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFim.Location = new System.Drawing.Point(773, 36);
+            this.dtpFim.Name = "dtpFim";
+            this.dtpFim.Size = new System.Drawing.Size(111, 20);
+            this.dtpFim.TabIndex = 176;
+            // 
+            // picFecharConexao
+            // 
+            this.picFecharConexao.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picFecharConexao.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.picFecharConexao.Image = global::Login.Properties.Resources.fecharConexao;
+            this.picFecharConexao.Location = new System.Drawing.Point(6, 4);
+            this.picFecharConexao.Name = "picFecharConexao";
+            this.picFecharConexao.Size = new System.Drawing.Size(121, 56);
+            this.picFecharConexao.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picFecharConexao.TabIndex = 172;
+            this.picFecharConexao.TabStop = false;
+            this.toolTip1.SetToolTip(this.picFecharConexao, "Fechar conexão com o Banco de Dados");
+            // 
+            // picExcluir
+            // 
+            this.picExcluir.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picExcluir.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.picExcluir.Image = global::Login.Properties.Resources.excuir;
+            this.picExcluir.Location = new System.Drawing.Point(632, 4);
+            this.picExcluir.Name = "picExcluir";
+            this.picExcluir.Size = new System.Drawing.Size(90, 56);
+            this.picExcluir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picExcluir.TabIndex = 170;
+            this.picExcluir.TabStop = false;
+            this.toolTip1.SetToolTip(this.picExcluir, "Clique aqui para Excluir seus Dados");
+            // 
+            // picAtualizar
+            // 
+            this.picAtualizar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picAtualizar.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.picAtualizar.Image = global::Login.Properties.Resources.atualizar;
+            this.picAtualizar.Location = new System.Drawing.Point(531, 4);
+            this.picAtualizar.Name = "picAtualizar";
+            this.picAtualizar.Size = new System.Drawing.Size(98, 56);
+            this.picAtualizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picAtualizar.TabIndex = 169;
+            this.picAtualizar.TabStop = false;
+            this.toolTip1.SetToolTip(this.picAtualizar, "Clique aqui para Atualizar seus Dados");
+            // 
+            // picSalvar
+            // 
+            this.picSalvar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picSalvar.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.picSalvar.Image = global::Login.Properties.Resources.aquivos;
+            this.picSalvar.Location = new System.Drawing.Point(428, 5);
+            this.picSalvar.Name = "picSalvar";
+            this.picSalvar.Size = new System.Drawing.Size(95, 56);
+            this.picSalvar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSalvar.TabIndex = 168;
+            this.picSalvar.TabStop = false;
+            this.toolTip1.SetToolTip(this.picSalvar, "Clique aqui para Salvar seus Dados");
+            // 
+            // picPesquisar
+            // 
+            this.picPesquisar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picPesquisar.Image = global::Login.Properties.Resources.pesquisar;
+            this.picPesquisar.Location = new System.Drawing.Point(897, 5);
+            this.picPesquisar.Name = "picPesquisar";
+            this.picPesquisar.Size = new System.Drawing.Size(75, 57);
+            this.picPesquisar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPesquisar.TabIndex = 71;
+            this.picPesquisar.TabStop = false;
+            this.toolTip1.SetToolTip(this.picPesquisar, "Clique aqui para Pesquisar");
+            // 
+            // frmCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Blue;
             this.ClientSize = new System.Drawing.Size(984, 711);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnJustificado);
             this.Controls.Add(this.btnDireita);
@@ -1029,7 +1060,6 @@
             this.Controls.Add(this.rcbTexto);
             this.Controls.Add(this.picFoto);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dtpHoje);
@@ -1047,7 +1077,7 @@
             this.Controls.Add(this.mskCelular);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.mskTelefone);
-            this.Name = "Curso";
+            this.Name = "frmCurso";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Curso";
@@ -1063,11 +1093,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSeta1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picExcluir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picAtualizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSalvar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPesquisar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBancoDados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSegredo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picReitor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picProfessor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMateria)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picVoce)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLocalFormacao)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
@@ -1089,15 +1120,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSegredo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picReitor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picProfessor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMateria)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picVoce)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLocalFormacao)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picFecharConexao)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picExcluir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAtualizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSalvar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPesquisar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1172,13 +1202,15 @@
         private System.Windows.Forms.PictureBox picFoto;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker dtpInicio;
+        private System.Windows.Forms.DateTimePicker dtpFim;
+        private System.Windows.Forms.PictureBox picFecharConexao;
         private System.Windows.Forms.PictureBox picExcluir;
         private System.Windows.Forms.PictureBox picAtualizar;
         private System.Windows.Forms.PictureBox picSalvar;
         private System.Windows.Forms.PictureBox picPesquisar;
-        private System.Windows.Forms.PictureBox picBancoDados;
-        private System.Windows.Forms.TextBox txtPesquisar;
-        private System.Windows.Forms.Label label2;
 
     }
 }
